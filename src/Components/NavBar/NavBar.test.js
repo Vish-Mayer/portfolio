@@ -14,7 +14,19 @@ describe('NavBar', () => {
     wrapper = shallow(<NavBar/>)
   });
 
-  it('does something', () => {
-    //test
-  });
+  it('renders a tab with text "Home"', () => {
+    expect(wrapper.find(".home").text()).toBe("Home")
+  })
+
+  it('renders a tab with text "About"', () => {
+    expect(wrapper.find(".about").text()).toBe("About")
+  })
+
+  it('renders a tab with text "Projects"', () => {
+    expect(wrapper.find(".projects").text()).toBe("Projects")
+  })
+
+  it('renders a tab with text "Contact"', () => {
+    expect(wrapper.find(".contact").text()).toBe("Contact")
+  })
 });
