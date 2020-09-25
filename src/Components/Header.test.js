@@ -1,5 +1,4 @@
-import React from 'react';
-import Typical from 'react-typical'
+import React from 'react'
 import Header from './Header';
 
 import { configure, shallow } from 'enzyme';
@@ -13,11 +12,6 @@ describe('Header', () => {
   
   beforeEach(() => {
     wrapper = shallow(<Header/>)
-  });
-
-  it('renders title of application', () => {
-    const intro = ("Hi Im Vish, I'm a Full Stack Developer,I write applications in  ")
-    expect(wrapper.find("h2").text()).toContain(intro)
   });
 
   it('loops through a list of languages', () => {
