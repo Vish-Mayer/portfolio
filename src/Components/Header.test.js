@@ -1,4 +1,5 @@
 import React from 'react';
+import Typical from 'react-typical'
 import Header from './Header';
 
 import { configure, shallow } from 'enzyme';
@@ -15,6 +16,12 @@ describe('Header', () => {
   });
 
   it('renders title of application', () => {
-    expect(wrapper.find("h1").text()).toContain("Vishal Mayer Kakkad - Full Stack Developer")
+    const intro = ("Hi Im Vish, I'm a Full Stack Developer,I write applications in  ")
+    expect(wrapper.find("h2").text()).toContain(intro)
+  });
+
+  it('loops through a list of languages', () => {
+    const output = wrapper.find("h2").props().children
+    expect(JSON.stringify(output)).toMatchSnapshot();
   });
 });
