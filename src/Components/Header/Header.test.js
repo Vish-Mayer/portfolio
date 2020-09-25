@@ -16,6 +16,6 @@ describe('Header', () => {
 
   it('loops through a list of languages', () => {
     const output = wrapper.find("h2").props().children
-    expect(JSON.stringify(output)).toMatchSnapshot();
+    expect(JSON.stringify(output)).toMatchSnapshot()
   });
 });
