@@ -1,9 +1,11 @@
 import React from 'react';
 import Typical from 'react-typical';
 
+import './Header.css'
+
 function Header() {
   return(
-  <div>
+  <div className="header">
     <h2>
       Hi Im Vish, I'm a Full Stack Developer,
       <p/>I write applications in {' '}
