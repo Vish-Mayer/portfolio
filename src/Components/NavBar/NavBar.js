@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import './NavBar.css'
+import { Link } from 'react-scroll'
 
 function NavBar() {
   const [navbar,setNavbar] = useState(false)
 
   const changeBackground = () => {
-    if(window.scrollY >= 20) {
+    if(window.scrollY >= 30) {
       setNavbar(true)
     } else {
       setNavbar(false)
@@ -16,19 +17,45 @@ function NavBar() {
   
   return(
     
-      <ul className={navbar ? "nav bg-secondary sticky-top nav-tabs nav-justified" : "nav bg-white sticky-top nav-tabs nav-justified"}>
+      <ul className="nav bg-white sticky-top nav-tabs nav-justified">
         <li className="nav-item">
-          <a className={navbar ? "nav-link text-light home" : "nav-link text-secondary home"} href="#">Home</a>
-          
+          <Link 
+            className={navbar ? "nav-link text-dark home" : "nav-link text-secondary home"}
+            to="home"
+            smooth={true}
+            hashSpy={true}
+            offset={50}
+            duration={500}>
+            Home
+          </Link>
         </li>
+
         <li className="nav-item">
-          <a className={navbar ? "nav-link text-light about" : "nav-link text-secondary about"} href="#">About</a>
+        <Link 
+            className={navbar ? "nav-link text-dark home" : "nav-link text-secondary about"}
+            to="about"
+            smooth={true}
+            hashSpy={true}
+            offset={50}
+            duration={500}>
+            About
+          </Link>
         </li>
+
         <li className="nav-item">
-          <a className={navbar ? "nav-link text-light projects" : "nav-link text-secondary projects"} href="#">Projects</a>
+          <a className={navbar ? "nav-link text-dark home" : "nav-link text-secondary projects"} href="#">Projects</a>
         </li>
+
         <li className="nav-item">
-          <a className={navbar ? "nav-link text-light contact" : "nav-link text-secondary contact"} href="#" tabindex="-1">Contact</a>
+         <Link 
+            className={navbar ? "nav-link text-dark home" : "nav-link text-secondary contact"}
+            to="contact"
+            smooth={true}
+            hashSpy={true}
+            offset={50}
+            duration={500}>
+            Contact
+          </Link>
         </li>
       </ul>
       

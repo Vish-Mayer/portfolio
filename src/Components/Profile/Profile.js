@@ -1,9 +1,10 @@
 import React from 'react';
+import './Profile.css'
 
 function Profile() {
   return(
-   <div className="profile">
-     Im a profile - I like doing things. 
+   <div className="profile" id="about">
+     <h1>About</h1>
      </div>
   )
 }

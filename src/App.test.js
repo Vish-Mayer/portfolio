@@ -6,6 +6,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 import NavBar from './Components/NavBar/NavBar';
 import Header from './Components/Header/Header';
+import Contact from './Components/Contact/Contact';
 
 configure({ adapter: new Adapter() });
 
@@ -23,5 +24,9 @@ describe('App', () => {
 
   it('displays the Header', () => {
     expect(wrapper.find(<Header/>)).toBeTruthy()
+  });
+
+  it('displays Contact', () => {
+    expect(wrapper.find(<Contact/>)).toBeTruthy()
   });
 });

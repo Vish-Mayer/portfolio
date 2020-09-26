@@ -1,20 +1,20 @@
 import React from 'react'
-import Profile from './Profile';
+import Contact from './Contact';
 
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-describe('Profile', () => {
+describe('Contact', () => {
 
   let wrapper;
   
   beforeEach(() => {
-    wrapper = shallow(<Profile/>)
+    wrapper = shallow(<Contact/>)
   });
 
-  it('loops through a list of languages', () => {
-    expect(wrapper.find('h1').text()).toBe("About")
+  it('displays contact info', () => {
+    expect(wrapper.find('h1').text()).toBe("Contact")
   });
 });

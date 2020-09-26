@@ -15,25 +15,18 @@ describe('NavBar', () => {
   });
 
   it('renders a tab with text "Home"', () => {
-    expect(wrapper.find(".home").text()).toBe("Home")
+    expect(wrapper.find(".home").props().children).toBe("Home")
   })
 
   it('renders a tab with text "About"', () => {
-    expect(wrapper.find(".about").text()).toBe("About")
+    expect(wrapper.find(".about").props().children).toBe("About")
   })
 
   it('renders a tab with text "Projects"', () => {
-    expect(wrapper.find(".projects").text()).toBe("Projects")
+    expect(wrapper.find(".projects").props().children).toBe("Projects")
   })
 
   it('renders a tab with text "Contact"', () => {
-    expect(wrapper.find(".contact").text()).toBe("Contact")
+    expect(wrapper.find(".contact").props().children).toBe("Contact")
   })
-
-  it('changes class after scroll event', () => {
-    wrapper.simulate('scroll')
-    console.log(wrapper.find(".contact").props().className)
-  })
-
-  // component.simulate('scroll')
 });
