@@ -1,7 +1,7 @@
 import React from 'react';
-import './Profile.css'
+import './About.css'
 
-function Profile() {
+function About() {
   return(
    <div className="profile" id="about">
      <h1>About</h1>
@@ -9,4 +9,4 @@ function Profile() {
   )
 }
 
-export default Profile
+export default About

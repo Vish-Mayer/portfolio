@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
-import './NavBar.css'
 import { Link } from 'react-scroll'
 
 function NavBar() {
   const [navbar,setNavbar] = useState(false)
 
   const changeBackground = () => {
-    if(window.scrollY >= 30) {
+    if(window.scrollY >= 100) {
       setNavbar(true)
     } else {
       setNavbar(false)

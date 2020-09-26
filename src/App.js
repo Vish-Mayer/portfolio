@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import NavBar from './Components/NavBar/NavBar'
 import Header from './Components/Header/Header'
-import Profile from './Components/Profile/Profile'
+import About from './Components/About/About'
+import Projects from './Components/Projects/Projects'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -14,7 +15,7 @@ class App extends Component {
       <div className="App">
         <NavBar />
         <Header />
-        <Profile />
+        <About />
         <Contact />
       </div>
     );

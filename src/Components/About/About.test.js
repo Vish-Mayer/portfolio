@@ -1,5 +1,5 @@
 import React from 'react'
-import Profile from './Profile';
+import Profile from './About';
 
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -14,7 +14,7 @@ describe('Profile', () => {
     wrapper = shallow(<Profile/>)
   });
 
-  it('loops through a list of languages', () => {
+  it('contains header with name of component', () => {
     expect(wrapper.find('h1').text()).toBe("About")
   });
 });
