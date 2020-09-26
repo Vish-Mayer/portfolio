@@ -29,4 +29,11 @@ describe('NavBar', () => {
   it('renders a tab with text "Contact"', () => {
     expect(wrapper.find(".contact").text()).toBe("Contact")
   })
+
+  it('changes class after scroll event', () => {
+    wrapper.simulate('scroll')
+    console.log(wrapper.find(".contact").props().className)
+  })
+
+  // component.simulate('scroll')
 });
