@@ -5,9 +5,8 @@ import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 import NavBar from './Components/NavBar/NavBar';
-import Header from './Components/Header/Header';
-import Contact from './Components/Contact/Contact';
-import Projets from './Components/Projects/Projects';
+import Home from './Components/Home/Home';
+import Projects from './Components/Projects/Projects';
 
 configure({ adapter: new Adapter() });
 
@@ -23,11 +22,11 @@ describe('App', () => {
     expect(wrapper.find(<NavBar/>)).toBeTruthy()
   });
 
-  it('displays the Header', () => {
-    expect(wrapper.find(<Header/>)).toBeTruthy()
+  it('displays the Home section', () => {
+    expect(wrapper.find(<Home/>)).toBeTruthy()
   });
 
-  it('displays Contact', () => {
-    expect(wrapper.find(<Contact/>)).toBeTruthy()
+  it('displays the Projects section', () => {
+    expect(wrapper.find(<Projects/>)).toBeTruthy()
   });
 });

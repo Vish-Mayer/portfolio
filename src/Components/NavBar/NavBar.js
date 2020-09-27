@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import { Link } from 'react-scroll'
+import { NavLink } from 'react-router-dom'
+import { Link } from 'react-scroll';
 
 function NavBar() {
   const [navbar,setNavbar] = useState(false)
@@ -13,16 +14,15 @@ function NavBar() {
   }
 
   window.addEventListener('scroll', changeBackground)
-  
+
   return(
-    
       <ul className="nav bg-white sticky-top nav-tabs nav-justified">
         <li className="nav-item">
           <Link 
             className={navbar ? "nav-link text-dark home" : "nav-link text-secondary home"}
             to="home"
+            href="/"
             smooth={true}
-            hashSpy={true}
             offset={50}
             duration={500}>
             Home
@@ -30,11 +30,10 @@ function NavBar() {
         </li>
 
         <li className="nav-item">
-        <Link 
-            className={navbar ? "nav-link text-dark home" : "nav-link text-secondary about"}
+          <Link 
+            className={navbar ? "nav-link text-dark about" : "nav-link text-secondary about"}
             to="about"
             smooth={true}
-            hashSpy={true}
             offset={50}
             duration={500}>
             About
@@ -42,23 +41,24 @@ function NavBar() {
         </li>
 
         <li className="nav-item">
-          <a className={navbar ? "nav-link text-dark home" : "nav-link text-secondary projects"} href="#">Projects</a>
+          <NavLink 
+            to="/projects"
+            className={navbar ? "nav-link text-dark projects" : "nav-link text-secondary projects"}>
+              Projects
+          </NavLink>
         </li>
 
         <li className="nav-item">
-         <Link 
-            className={navbar ? "nav-link text-dark home" : "nav-link text-secondary contact"}
+          <Link 
+            className={navbar ? "nav-link text-dark contact" : "nav-link text-secondary contact"}
             to="contact"
             smooth={true}
-            hashSpy={true}
             offset={50}
             duration={500}>
             Contact
           </Link>
         </li>
       </ul>
-      
-  
   )
 }
 
