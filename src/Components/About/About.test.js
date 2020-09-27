@@ -1,5 +1,5 @@
 import React from 'react'
-import Profile from './About';
+import About from './About'
 
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -11,7 +11,7 @@ describe('Profile', () => {
   let wrapper;
   
   beforeEach(() => {
-    wrapper = shallow(<Profile/>)
+    wrapper = shallow(<About/>)
   });
 
   it('contains header with name of component', () => {

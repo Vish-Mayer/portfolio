@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Typical from 'react-typical';
-import Aos from 'aos';
 import "aos/dist/aos.css";
 
 import './Header.css'

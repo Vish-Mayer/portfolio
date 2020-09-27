@@ -1,12 +1,12 @@
 import React from 'react';
 import './Projects.css'
 
-function About() {
+function Projects() {
   return(
-   <div className="projects" id="projects">
+   <div className="projects-content">
      <h1>Projects</h1>
      </div>
   )
 }
 
-export default About
+export default Projects 

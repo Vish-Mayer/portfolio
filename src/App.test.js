@@ -7,6 +7,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import NavBar from './Components/NavBar/NavBar';
 import Header from './Components/Header/Header';
 import Contact from './Components/Contact/Contact';
+import Projets from './Components/Projects/Projects';
 
 configure({ adapter: new Adapter() });
 
