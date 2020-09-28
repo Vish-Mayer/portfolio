@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 
 function NavBar2() {
   const [navbar,setNavbar] = useState(false)
@@ -16,35 +17,35 @@ function NavBar2() {
   return(
       <ul className="nav bg-white sticky-top nav-tabs nav-justified">
         <li className="nav-item">
-          <a
+          <Link
             className={navbar ? "nav-link text-dark home" : "nav-link text-secondary home"}
-            href="/">
+            smooth to="/#home">
               Home
-          </a>
+          </Link>
         </li>
 
         <li className="nav-item">
-          <a
+          <Link
             className={navbar ? "nav-link text-dark about" : "nav-link text-secondary about"}
-            href="/#about">
+            smooth to="/#about">
               About
-          </a>
+          </Link>
         </li>
 
         <li className="nav-item">
-          <a
+          <Link
             className={navbar ? "nav-link text-dark projects" : "nav-link text-secondary projects"}
-            href="/#projects">
+            smooth to="/projects">
               Projects
-          </a>
+          </Link>
         </li>
 
         <li className="nav-item">
-          <a
+          <Link
             className={navbar ? "nav-link text-dark contact" : "nav-link text-secondary contact"}
-            href="/#contact">
+            smooth to="/#contact">
               Contact 
-          </a>
+          </Link>
         </li>
       </ul>
   )
