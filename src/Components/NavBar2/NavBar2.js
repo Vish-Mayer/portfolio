@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
-import { NavLink } from 'react-router-dom'
-import { Link } from 'react-scroll';
 
-function NavBar() {
+function NavBar2() {
   const [navbar,setNavbar] = useState(false)
 
   const changeBackground = () => {
@@ -18,49 +16,38 @@ function NavBar() {
   return(
       <ul className="nav bg-white sticky-top nav-tabs nav-justified">
         <li className="nav-item">
-          <Link 
+          <a
             className={navbar ? "nav-link text-dark home" : "nav-link text-secondary home"}
-            to="home"
-            smooth={true}
-            offset={-60}
-            duration={500}>
-            Home
-          </Link>
+            href="/">
+              Home
+          </a>
         </li>
 
         <li className="nav-item">
-        <Link 
+          <a
             className={navbar ? "nav-link text-dark about" : "nav-link text-secondary about"}
-            to="about"
-            smooth={true}
-            offset={-60}
-            duration={500}
-            isDynamic={true}>
-              
-            About
-          </Link>
+            href="/#about">
+              About
+          </a>
         </li>
 
         <li className="nav-item">
-          <NavLink 
-            to="/projects"
-            className={navbar ? "nav-link text-dark projects" : "nav-link text-secondary projects"}>
+          <a
+            className={navbar ? "nav-link text-dark projects" : "nav-link text-secondary projects"}
+            href="/#projects">
               Projects
-          </NavLink>
+          </a>
         </li>
 
         <li className="nav-item">
-          <Link 
+          <a
             className={navbar ? "nav-link text-dark contact" : "nav-link text-secondary contact"}
-            to="contact"
-            smooth={true}
-            offset={0}
-            duration={500}>
-            Contact
-          </Link>
+            href="/#contact">
+              Contact 
+          </a>
         </li>
       </ul>
   )
 }
 
-export default NavBar
+export default NavBar2

@@ -4,9 +4,11 @@ import Home from './Home';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import Header from '../Header/Header'
-import About from '../About/About'
-import Contact from '../Contact/Contact';
+import NavBar from '../Components/NavBar/NavBar'
+import Header from '../Components/Header/Header';
+import About from '../Components/About/About';
+import Contact from '../Components/Contact/Contact';
+
 
 configure({ adapter: new Adapter() });
 
@@ -16,6 +18,10 @@ describe('Home', () => {
 
   beforeEach(() => {
     wrapper = shallow(<Home />);
+  });
+
+  it('displays the NavBar', () => {
+    expect(wrapper.find(<NavBar/>)).toBeTruthy()
   });
 
   it('displays the Header', () => {
