@@ -1,6 +1,5 @@
 import React from 'react';
 import Typical from 'react-typical';
-import "aos/dist/aos.css";
 
 import './Header.css'
 

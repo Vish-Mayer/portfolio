@@ -1,15 +1,13 @@
-import React from 'react';
-import './Projects.css'
+import React, { Component } from 'react';
 
-import NavBar2 from '../Components/NavBar2/NavBar2'
-
-function Projects() {
-  return(
-   <div className="projects-content" id="projects">
-     <NavBar2/>
-     <h1>Projects</h1>
-     </div>
-  )
+import ProjectContent from '../Components/ProjectContent/ProjectContent'
+class Projects extends Component{
+  render() {
+    return(
+      <div className="projects" id="projects">
+        <ProjectContent />
+      </div>
+    )
+  }
 }
-
-export default Projects 
+export default Projects

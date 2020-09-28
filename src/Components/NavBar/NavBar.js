@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import { NavLink } from 'react-router-dom'
-import { Link } from 'react-scroll';
+import { HashLink as Link } from 'react-router-hash-link';
 
 function NavBar() {
   const [navbar,setNavbar] = useState(false)
@@ -18,45 +17,34 @@ function NavBar() {
   return(
       <ul className="nav bg-white sticky-top nav-tabs nav-justified">
         <li className="nav-item">
-          <Link 
+          <Link
             className={navbar ? "nav-link text-dark home" : "nav-link text-secondary home"}
-            to="home"
-            smooth={true}
-            offset={-60}
-            duration={500}>
-            Home
+            smooth to="/#home">
+              Home
           </Link>
         </li>
 
         <li className="nav-item">
-        <Link 
+          <Link
             className={navbar ? "nav-link text-dark about" : "nav-link text-secondary about"}
-            to="about"
-            smooth={true}
-            offset={-60}
-            duration={500}
-            isDynamic={true}>
-              
-            About
+            smooth to="/#about">
+              About
           </Link>
         </li>
 
         <li className="nav-item">
-          <NavLink 
-            to="/projects"
-            className={navbar ? "nav-link text-dark projects" : "nav-link text-secondary projects"}>
+          <Link
+            className={navbar ? "nav-link text-dark projects" : "nav-link text-secondary projects"}
+            smooth to="/projects">
               Projects
-          </NavLink>
+          </Link>
         </li>
 
         <li className="nav-item">
-          <Link 
+          <Link
             className={navbar ? "nav-link text-dark contact" : "nav-link text-secondary contact"}
-            to="contact"
-            smooth={true}
-            offset={0}
-            duration={500}>
-            Contact
+            smooth to="/#contact">
+              Contact 
           </Link>
         </li>
       </ul>
