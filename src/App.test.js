@@ -4,9 +4,8 @@ import App from './App';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import NavBar from './Components/NavBar/NavBar';
-import Home from './Home/Home';
-import Projects from './Projects/Projects';
+import Home from './Pages/Home/Home';
+import Projects from './Pages/Projects/Projects';
 
 configure({ adapter: new Adapter() });
 

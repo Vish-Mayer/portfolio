@@ -6,7 +6,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-import ProjectContent from '../Components/ProjectContent/ProjectContent'
+import ProjectContent from '../../Components/ProjectContent/ProjectContent'
 
 describe('Projects', () => {
 

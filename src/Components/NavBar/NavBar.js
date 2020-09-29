@@ -15,7 +15,7 @@ function NavBar() {
   window.addEventListener('scroll', changeBackground)
 
   return(
-      <ul className="nav bg-white sticky-top nav-tabs nav-justified">
+      <ul className="nav bg-white font-weight-bold sticky-top nav-tabs nav-justified">
         <li className="nav-item">
           <Link
             className={navbar ? "nav-link text-dark home" : "nav-link text-secondary home"}
@@ -35,7 +35,7 @@ function NavBar() {
         <li className="nav-item">
           <Link
             className={navbar ? "nav-link text-dark projects" : "nav-link text-secondary projects"}
-            smooth to="/projects">
+            smooth to="/projects/#project-content">
               Projects
           </Link>
         </li>

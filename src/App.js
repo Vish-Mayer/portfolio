@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 
-import Home from './/Home/Home';
-import Projects from './/Projects/Projects';
+import Home from './Pages/Home/Home';
+import Projects from './Pages/Projects/Projects';
 import NavBar from './Components/NavBar/NavBar'
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 import { BrowserRouter ,Switch, Route, } from 'react-router-dom';
 
 class App extends Component {
