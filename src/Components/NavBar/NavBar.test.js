@@ -25,7 +25,7 @@ describe('NavBar', () => {
     })
   })
 
-  describe('Home', () => {
+  describe('About', () => {
     it('renders a tab with text "About"', () => {
       expect(wrapper.find(".about").props().children).toBe("About")
     })
@@ -35,7 +35,7 @@ describe('NavBar', () => {
     })
   })
 
-  describe('Home', () => {
+  describe('Projects', () => {
     it('renders a tab with text "Projects"', () => {
       expect(wrapper.find(".projects").props().children).toBe("Projects")
     })
@@ -44,7 +44,7 @@ describe('NavBar', () => {
     })
   })
 
-  describe('Home', () => {
+  describe('Contact', () => {
     it('renders a tab with text "Contact"', () => {
       expect(wrapper.find(".contact").props().children).toBe("Contact")
     })
