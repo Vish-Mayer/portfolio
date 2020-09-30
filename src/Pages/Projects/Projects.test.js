@@ -16,7 +16,7 @@ describe('Projects', () => {
     wrapper = shallow(<Projects />)
   });
 
-  it('displays the Home section', () => {
-    expect(wrapper.find(<ProjectContent/>)).toBeTruthy()
+  it('displays the NavBar', () => {
+    expect(wrapper.containsMatchingElement(<ProjectContent />)).toEqual(true);
   });
 });

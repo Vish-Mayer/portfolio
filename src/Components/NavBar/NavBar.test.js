@@ -49,7 +49,6 @@ describe('NavBar', () => {
       expect(wrapper.find(".contact").props().children).toBe("Contact")
     })
     it('navigates the user to the contact section', () => {
-      const link = Link
       expect(wrapper.find(".contact").props().to).toBe('/#contact')
     })
   })
