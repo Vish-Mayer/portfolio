@@ -20,17 +20,15 @@ describe('NavBar', () => {
       expect(wrapper.find(".home").props().children).toBe("Home")
     })
     it('navigates the user to the home screen', () => {
-      const link = Link
       expect(wrapper.find(".home").props().to).toBe('/#home')
     })
   })
-
+  
   describe('About', () => {
     it('renders a tab with text "About"', () => {
       expect(wrapper.find(".about").props().children).toBe("About")
     })
     it('navigates the user to about section', () => {
-      const link = Link
       expect(wrapper.find(".about").props().to).toBe('/#about')
     })
   })

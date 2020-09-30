@@ -14,11 +14,12 @@ configure({ adapter: new Adapter() });
 
 describe('App', () => {
 
+  let wrapper
   let pathMap = {};
-  let component = shallow(<App/>);
 
-  beforeAll(() => {
-    pathMap = component.find(Route).reduce((pathMap, route) => {
+  beforeEach(() => {
+    wrapper = shallow(<App/>);
+    pathMap = wrapper.find(Route).reduce((pathMap, route) => {
         const routeProps = route.props();
         pathMap[routeProps.path] = routeProps.component;
         return pathMap;
@@ -26,7 +27,7 @@ describe('App', () => {
   })
 
   it('displays the NavBar', () => {
-    expect(component.containsMatchingElement(<NavBar />)).toEqual(true);
+    expect(wrapper.containsMatchingElement(<NavBar />)).toEqual(true);
   });
 
   it('should show Home component for / router ', () => {
