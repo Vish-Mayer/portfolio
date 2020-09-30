@@ -1,21 +1,21 @@
 import React from 'react'
-import Header from './Header';
+import ProjectCards from './ProjectCards'
 
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-describe('Header', () => {
+describe('Projects', () => {
 
   let wrapper;
   
   beforeEach(() => {
-    wrapper = shallow(<Header/>)
+    wrapper = shallow(<ProjectCards/>)
   });
 
-  it('it matches the snapshot of the looped title being rendered', () => {
-    const output = wrapper.find("h2").props().children
+  it('project cards class matches snapshot', () => {
+    const output = wrapper.find('.project-cards').props("className")
     expect(JSON.stringify(output)).toMatchSnapshot()
   });
 });
