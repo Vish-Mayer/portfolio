@@ -1,8 +1,5 @@
-import React from 'react'
-
 describe('Features', () => {
   
-
   const redirectFromHome = (to) => {
     cy.visit('http://localhost:3000/')
     cy.get(to)
