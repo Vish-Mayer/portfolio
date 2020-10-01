@@ -30,11 +30,11 @@ describe('App', () => {
     expect(wrapper.containsMatchingElement(<NavBar />)).toEqual(true);
   });
 
-  it('should show Home component for / router ', () => {
+  it('should show Home component for "/" route ', () => {
     expect(pathMap['/']).toBe(Home);
   })
 
-  it('should show Projects component for /projects router ', () => {
+  it('should show Projects component for "/projects" route ', () => {
     expect(pathMap['/projects']).toBe(Projects);
   })
 });

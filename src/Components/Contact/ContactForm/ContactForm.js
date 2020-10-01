@@ -4,7 +4,7 @@ import './ContactForm.css'
 function ContactForm() {
   return(
    <div className="contact-form" id="contact">
-     <h1>Im a Contact Form, I send emails</h1>
+      Im a Contact Form, I send emails
      </div>
   )
 }
