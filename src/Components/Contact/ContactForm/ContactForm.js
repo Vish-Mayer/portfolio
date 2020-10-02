@@ -1,39 +1,51 @@
-import React from 'react';
 import emailjs from 'emailjs-com';
 import './ContactForm.css'
+import React, { Component } from 'react';
 
-function ContactForm() {
+class ContactForm extends Component{
 
-  require('dotenv').config()
+  constructor(props) {
+    super(props)
+    this.state={
+      message:{
+        input: ''
+      }
+    }
+    this.handleInput = this.handleInput.bind(this);
+  }
 
-  const serviceID = process.env.REACT_APP_SERVICE_ID
-  const templateID = process.env.REACT_APP_TEMPLATE_ID
-  const userID = process.env.REACT_APP_USER_ID
+  handleInput(e) {
+    this.setState ({
+      message:{
+        input: e.target.value 
+      }
+    })
+  }
 
-  function sendEmail(e){
+  sendEmail(e){
     e.preventDefault();
   
-    emailjs.sendForm(serviceID, templateID, e.target, userID)
+    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_USER_ID)
     .then((result) => {
         console.log(result.text);
     }, (error) => {
         console.log(error.text);
     });
-    window.alert('Your message has been sent.');
     e.target.reset()
   }
 
-  return(
-   <div className="contact-form container-fluid d-flex bd-highlight" id="contact">
-      <form onSubmit={sendEmail}>
+  render() {
+    return(
+      <div className="contact-form container-fluid d-flex bd-highlight" id="contact">
+      <form onSubmit={this.sendEmail}>
         <h4>Get in Touch!</h4>
         <div class="row">
           <div class="col">
-            <input type="text" class="form-control" placeholder="Name" name="user_name"/>
+            <input value={this.state.message.input} onChange={this.handleInput} type="text" class="form-control" id="inputName" placeholder="Name" name="user_name"/>
           </div>
         </div><br/>
         <div class="form-group">
-           <input type="email" class="form-control" id="inputEmail" placeholder="Email address" name="user_email"/>
+           <input value={this.state.message.input} onChange={this.handleInput} type="email" class="form-control" id="inputEmail" placeholder="Email address" name="user_email"/>
            </div>
            <div class="form-group">
             <label id ="input-message" for="FormTextarea">Your Message</label>
@@ -42,9 +54,8 @@ function ContactForm() {
           <button type="submit" class="btn btn-primary" id="send">Send</button>
         </form>
      </div>
-     
-    
-  )
+    )
+  }
 }
 
 export default ContactForm
