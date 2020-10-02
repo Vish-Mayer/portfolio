@@ -55,6 +55,7 @@ class ContactForm extends Component{
     }, (error) => {
         console.log(error.text);
     });
+      window.alert('Your message has been sent');
       e.target.reset()
       this.setState({
         message:{
