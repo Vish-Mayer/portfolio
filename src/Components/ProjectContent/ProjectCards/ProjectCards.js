@@ -27,6 +27,12 @@ class ProjectCards extends Component {
               cardName="This is a Dynamic Card" 
               cardDescription= "This is a dynamic card description"/>
           </div>
+          <div className="col-md-4">
+            <ProjectCardUI 
+              imgsrc={img1} 
+              cardName="This is a Dynamic Card" 
+              cardDescription= "This is a dynamic card description"/>
+          </div>
         </div>
       </div>
     );

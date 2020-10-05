@@ -10,6 +10,7 @@ class App extends Component {
   
   render() {
     return (
+      <div className="body">
       <div className="App">
         <BrowserRouter>
           <NavBar />
@@ -18,6 +19,7 @@ class App extends Component {
             <Route path="/projects" component={Projects} />
           </Switch>
         </BrowserRouter>
+      </div>
       </div>
     );
   }

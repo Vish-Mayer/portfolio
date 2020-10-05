@@ -1,7 +1,6 @@
 import emailjs from 'emailjs-com';
 import './ContactForm.css'
 import React, { Component } from 'react';
-
 class ContactForm extends Component{
 
   constructor(props) {
@@ -68,41 +67,46 @@ class ContactForm extends Component{
 
   render() {
     return(
-      <div className="contact-form container-fluid d-flex bd-highlight" id="contact">
-      <form onSubmit={this.sendEmail}>
-        <h4>Get in Touch!</h4>
-        <div class="row">
-          <div class="col">
-            <input 
-            value={this.state.message.name} 
-            onChange={this.handleInput1} 
-            type="text" class="form-control" 
-            id="inputName" placeholder="Name" 
-            name="user_name"/>
-          </div>
-        </div><br/>
-        <div class="form-group">
-           <input
-            value={this.state.message.email} 
-            onChange={this.handleInput2} 
-            type="email" class="form-control"
-            id="inputEmail" 
-            placeholder="Email address" 
-            name="user_email"/>
-           </div>
-           <div class="form-group">
-            <label id ="input-message" for="FormTextarea">Your Message</label>
-            <textarea 
-            value={this.state.message.body} 
-            onChange={this.handleInput3} class="form-control" 
-            id="FormTextarea"
-            name="message" 
-            cols ="70" 
-            rows="10"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" id="send">Send</button>
-        </form>
-     </div>
+      <div className = "container">
+        <div className="contact-form container-fluid d-flex bd-highlight" id="contact-form">
+        <form onSubmit={this.sendEmail}>
+          <h4>Get in Touch!</h4>
+          <div class="row">
+            <div class="col">
+              <input 
+              value={this.state.message.name} 
+              onChange={this.handleInput1} 
+              type="text" class="form-control" 
+              id="inputName" placeholder="Name" 
+              name="user_name"/>
+            </div>
+          </div><br/>
+          <div class="form-group">
+            <input
+              value={this.state.message.email} 
+              onChange={this.handleInput2} 
+              type="email" class="form-control"
+              id="inputEmail" 
+              placeholder="Email address" 
+              name="user_email"/>
+            </div>
+            <div class="form-group">
+              <label id ="input-message" for="FormTextarea">Your Message</label>
+              <textarea 
+              value={this.state.message.body} 
+              onChange={this.handleInput3} 
+              class="form-control" 
+              id="FormTextarea"
+              name="message" 
+              cols ="70" 
+              rows="10"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="send">Send</button>
+          </form>
+      </div>
+      <div>
+        </div>
+    </div>
     )
   }
 }

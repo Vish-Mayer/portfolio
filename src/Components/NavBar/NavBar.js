@@ -1,12 +1,21 @@
 import React, {useState} from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
+import './NavBar.css'
 
 function NavBar() {
   const [navbar,setNavbar] = useState(false)
 
   const changeBackground = () => {
-    if(window.scrollY >= 100) {
+    if(window.scrollY >= 40) {
       setNavbar(true)
+    } else {
+      setNavbar(false)
+    }
+  }
+
+  const showNavBar = () => {
+    if(window.scrollY >= 200) {
+      setNavbar(false)
     } else {
       setNavbar(false)
     }
@@ -15,10 +24,10 @@ function NavBar() {
   window.addEventListener('scroll', changeBackground)
 
   return(
-      <ul className="nav bg-white font-weight-bold sticky-top nav-tabs nav-justified">
+    <ul className={ navbar ? "nav navbar1 font-weight-bold sticky-top nav-justified": "nav bg-transparent font-weight-bold sticky-top nav-justified"}>
         <li className="nav-item">
           <Link
-            className={navbar ? "nav-link text-dark home" : "nav-link text-secondary home"}
+            className={navbar ? "nav-link text-danger home" : "nav-link text-secondary home"}
             smooth to="/#home">
               Home
           </Link>
@@ -26,7 +35,7 @@ function NavBar() {
 
         <li className="nav-item">
           <Link
-            className={navbar ? "nav-link text-dark about" : "nav-link text-secondary about"}
+            className={navbar ? "nav-link text-light about" : "nav-link text-secondary about"}
             smooth to="/#about">
               About
           </Link>
@@ -34,7 +43,7 @@ function NavBar() {
 
         <li className="nav-item">
           <Link
-            className={navbar ? "nav-link text-dark projects" : "nav-link text-secondary projects"}
+            className={navbar ? "nav-link text-light projects" : "nav-link text-secondary projects"}
             smooth to="/projects/#project-content">
               Projects
           </Link>
@@ -42,7 +51,7 @@ function NavBar() {
 
         <li className="nav-item">
           <Link
-            className={navbar ? "nav-link text-dark contact" : "nav-link text-secondary contact"}
+            className={navbar ? "nav-link text-light contact" : "nav-link text-secondary contact"}
             smooth to="/#contact">
               Contact 
           </Link>
