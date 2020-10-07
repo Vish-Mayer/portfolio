@@ -3,5 +3,9 @@
 }
 
 .home1{
-  color: rgba(199, 37, 37, 0.808);
+  color: rgba(190, 16, 16, 0.726);
+}
+
+.home1:hover{
+  color: rgb(190, 190, 190);
 }

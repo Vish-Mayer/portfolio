@@ -69,39 +69,42 @@ class ContactForm extends Component{
     return(
       <div className = "container">
         <div className="contact-form container-fluid d-flex bd-highlight" id="contact-form">
-        <form onSubmit={this.sendEmail}>
+        <form onSubmit={this.sendEmail} data-testid="form">
           <h4>Get in Touch!</h4>
-          <div class="row">
-            <div class="col">
+          <div className="row">
+            <div className="col">
               <input 
               value={this.state.message.name} 
               onChange={this.handleInput1} 
-              type="text" class="form-control" 
-              id="inputName" placeholder="Name" 
+              type="text" 
+              className="form-control" 
+              id="inputName" 
+              placeholder="Name" 
               name="user_name"/>
             </div>
           </div><br/>
-          <div class="form-group">
+          <div className="form-group">
             <input
               value={this.state.message.email} 
               onChange={this.handleInput2} 
-              type="email" class="form-control"
+              type="email" 
+              className="form-control"
               id="inputEmail" 
               placeholder="Email address" 
               name="user_email"/>
             </div>
-            <div class="form-group">
+            <div className="form-group">
               <label id ="input-message" for="FormTextarea">Your Message</label>
               <textarea 
               value={this.state.message.body} 
               onChange={this.handleInput3} 
-              class="form-control" 
+              className="form-control" 
               id="FormTextarea"
               name="message" 
               cols ="70" 
               rows="10"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" id="send">Send</button>
+            <button type="submit" className="btn btn-primary" id="send">Send</button>
           </form>
       </div>
       <div>

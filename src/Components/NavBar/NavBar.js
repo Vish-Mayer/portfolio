@@ -35,7 +35,7 @@ function NavBar() {
 
         <li className="nav-item">
           <Link
-            className={navbar ? "nav-link text-light about" : "nav-link text-secondary about"}
+            className={navbar ? "nav-link text-white about" : "nav-link text-secondary about"}
             smooth to="/#about">
               About
           </Link>
@@ -43,7 +43,7 @@ function NavBar() {
 
         <li className="nav-item">
           <Link
-            className={navbar ? "nav-link text-light projects" : "nav-link text-secondary projects"}
+            className={navbar ? "nav-link text-white projects" : "nav-link text-secondary projects"}
             smooth to="/projects/#project-content">
               Projects
           </Link>
@@ -51,7 +51,7 @@ function NavBar() {
 
         <li className="nav-item">
           <Link
-            className={navbar ? "nav-link text-light contact" : "nav-link text-secondary contact"}
+            className={navbar ? "nav-link text-white contact" : "nav-link text-secondary contact"}
             smooth to="/#contact">
               Contact 
           </Link>

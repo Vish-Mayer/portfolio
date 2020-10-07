@@ -12,12 +12,19 @@
   color: whitesmoke;
   max-height: 100%;
   max-width: 100%;
-  padding-top: 10em;
+  padding-top: 20em;
   padding-left: 5em;
   position: absolute;
 }
 
 @media only screen and (max-width: 650px) {
+  .intro-message {
+    padding-top: 14em;
+    padding-left: 1em;
+  }
+}
+
+@media only screen and (max-height: 490px) {
   .intro-message {
     padding-top: 0em;
     padding-left: 1em;

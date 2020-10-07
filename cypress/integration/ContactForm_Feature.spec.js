@@ -24,11 +24,11 @@ describe('Contact Form', () => {
     cy.get('#FormTextarea').should('have.value', 'This is a test message, can you help?');
   })
 
-  it('clicks the button when the form is completed, leaving all text fields empty.', () => {
+  it('sends an email and resets the input fields..', () => {
     redirectFromHome('#contact')
     cy.get('#inputName').type('Michael Scofield')
     cy.get('#inputEmail').type('test@testingcypress.com')
-    cy.get('#FormTextarea').type('This is Mike, I need a favour.')
+    cy.get('#FormTextarea').type('This is Mike, Im alive and I need a favour.')
     cy.get('#send').click() 
     cy.get('#inputName').should('have.value', '');
     cy.get('#inputEmail').should('have.value', '');
