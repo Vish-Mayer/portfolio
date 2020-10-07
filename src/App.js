@@ -12,6 +12,7 @@ class App extends Component {
     return (
       <div className="body">
       <div className="App">
+      <div id="rectangle"></div>
         <BrowserRouter>
           <NavBar />
           <Switch>

@@ -13,9 +13,9 @@ function NavBar() {
     }
   }
 
-  const showNavBar = () => {
+  const hideNavBar = () => {
     if(window.scrollY >= 200) {
-      setNavbar(false)
+      setNavbar(true)
     } else {
       setNavbar(false)
     }
@@ -27,7 +27,7 @@ function NavBar() {
     <ul className={ navbar ? "nav navbar1 font-weight-bold sticky-top nav-justified": "nav bg-transparent font-weight-bold sticky-top nav-justified"}>
         <li className="nav-item">
           <Link
-            className={navbar ? "nav-link text-danger home" : "nav-link text-secondary home"}
+            className={navbar ? "nav-link home home1" : "nav-link text-secondary home home2"}
             smooth to="/#home">
               Home
           </Link>

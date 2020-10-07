@@ -6,7 +6,7 @@ import './Header.css'
 function Header() {
 
   return(
-  <div className="header jumbotron big-banner container-fluid d-flex " id="home">
+  <div className="header big-banner container-fluid d-flex " id="home">
     <div className="intro-message d-flex overflow">
       <div className="row">
         <div class="w-100">

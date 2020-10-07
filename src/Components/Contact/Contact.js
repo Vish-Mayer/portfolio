@@ -5,7 +5,7 @@ import ContactLinks from './ContactLinks/ContactLinks'
 
 function Contact() {
   return(
-    <div id="contact">
+    <div className="contact-section" id="contact">
       <h1>Contact</h1>
         <div className="contact-grid container-fluid d-flex justify-content-center" id="contact-grid">
           <div className="row">
