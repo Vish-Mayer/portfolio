@@ -1,7 +1,9 @@
 import React from 'react';
 import Typical from 'react-typical';
+import { HashLink as Link } from 'react-router-hash-link';
 
 import './Header.css'
+import icon from '../../Assets/dwn-arrowXS.png'
 
 function Header() {
 
@@ -19,9 +21,14 @@ function Header() {
                 wrapper="b"
               />
             </h2>
-          </div>
         </div>
-      </div>
+      </div>  
+    </div>
+      <div class="container-fluid d-flex justify-content-center">                  
+        <Link className="dwn-btn" smooth to="/#about">
+          <img src={icon}/>
+        </Link>
+    </div>
   </div>
   
   )

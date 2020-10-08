@@ -18,4 +18,8 @@ describe('Header', () => {
     const output = wrapper.find("h2").props().children
     expect(JSON.stringify(output)).toMatchSnapshot()
   });
+
+  it('displays an an arrow button', () => {
+    expect(wrapper.find("img").prop("src")).toEqual(image)
+  })
 });
