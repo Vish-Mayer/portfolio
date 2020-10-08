@@ -24,7 +24,7 @@ function Header() {
         </div>
       </div>  
     </div>
-      <div class="container-fluid d-flex justify-content-center">                  
+      <div class="dwn-btn-container container-fluid d-flex justify-content-center">                  
         <Link className="dwn-btn" smooth to="/#about">
           <img src={icon}/>
         </Link>

@@ -4,6 +4,8 @@ import Header from './Header';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
+import icon from '../../Assets/dwn-arrowXS.png'
+
 configure({ adapter: new Adapter() });
 
 describe('Header', () => {
@@ -19,7 +21,14 @@ describe('Header', () => {
     expect(JSON.stringify(output)).toMatchSnapshot()
   });
 
-  it('displays an an arrow button', () => {
-    expect(wrapper.find("img").prop("src")).toEqual(image)
+  describe('down button', () => {
+    it('displays an arrow image', () => {
+      const button = (wrapper.find('.dwn-btn').props().children)
+      expect((button).props.src).toEqual(icon)   
+    })
+    it('routes the user to the about section', () => {
+      const button = (wrapper.find('.dwn-btn').props())
+      expect((button).to).toEqual("/#about")
+    })
   })
 });
