@@ -22,6 +22,14 @@
   bottom: -25px;
 }
 
+.dwn-btn{
+  transform: scale(1);
+}
+
+.dwn-btn:hover{
+  transform: scale(1.05);
+}
+
 @media only screen and (max-width: 650px) {
   .intro-message {
     padding-top: 14em;

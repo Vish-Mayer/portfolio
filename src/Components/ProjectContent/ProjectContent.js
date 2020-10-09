@@ -5,9 +5,9 @@ import ProjectCards from './ProjectCards/ProjectCards'
 function ProjectContent() {
 
   return(
-  <div className="project-content" id="project-content">
+  <div className="project-content container-fluid"id="project-content">
     <h1>Projects</h1>
-    These are some things that Ive made. 
+    These are some things that Ive made.
     <ProjectCards />
   </div>
   )

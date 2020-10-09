@@ -1,17 +1,18 @@
-
 .card{
-  width: 25rem;
+  width: 40em;
   margin: 0 auto; 
   float: none; 
   margin-bottom: 10px; 
   max-width: 100%;
+  z-index: 99;
 }
 .card:hover{
-  box-shadow: 5px 10px 20px 1px rgba(0,0,0,0.253)!important;
+  box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.185)!important;
 }
 
 .card-body{
-  padding: 2rem 0rem !important
+  padding: 2rem 0rem !important;
+  background-color: rgba(255, 255, 255, 0.493);
 }
 
 .card-text{
@@ -28,9 +29,16 @@
 }
 
 .card-img-top{
-  transform: scale(1);
+  display: inline-block; /* shrink wrap to image */
+  overflow: hidden;
+  padding-top: 1em;
+}
+
+.card-img-top{
+  transition: .3s ease-in-out;
 }
 
 .card-img-top:hover{
-  transform: scale(1.8);
+  filter: opacity(0.8) brightness(50%);
 }
+
