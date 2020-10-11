@@ -1,6 +1,11 @@
 import emailjs from 'emailjs-com';
 import './ContactForm.css'
 import React, { Component } from 'react';
+
+const service_id = process.env.REACT_APP_SERVICE_ID
+const template_id =  process.env.REACT_APP_TEMPLATE_ID
+const user_id = process.env.REACT_APP_USER_ID
+
 class ContactForm extends Component{
 
   constructor(props) {
@@ -42,13 +47,19 @@ class ContactForm extends Component{
     })
   }
 
+  resetForm() {
+    this.setState({
+      message:{
+        name: '',
+        email: '',
+        body: '',
+      }
+    })
+  }
+
   sendEmail(e){
     e.preventDefault();
-    emailjs.sendForm(
-      process.env.REACT_APP_SERVICE_ID,
-      process.env.REACT_APP_TEMPLATE_ID,
-      e.target, 
-      process.env.REACT_APP_USER_ID)
+    emailjs.sendForm(service_id, template_id, e.target, user_id)
     .then((result) => {
         console.log(result.text);
     }, (error) => {
@@ -56,13 +67,7 @@ class ContactForm extends Component{
     });
       window.alert('Your message has been sent');
       e.target.reset()
-      this.setState({
-        message:{
-          name: '',
-          email: '',
-          body: '',
-        }
-      })
+      this.resetForm()
   }
 
   render() {

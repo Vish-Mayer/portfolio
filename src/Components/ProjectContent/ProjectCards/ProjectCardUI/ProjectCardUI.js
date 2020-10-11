@@ -15,6 +15,14 @@ const ProjectCardUI = (props)=>{
     document.body.style.overflow = ""
   }
 
+  function displayPreview(value){
+    const array = value.split(" ")
+    const output = array.slice(0, 10).join(" ")
+    return(
+      output + "... "
+    )
+  }
+
   return(
     
     <div className="card text-center container-fluid d-flex">
@@ -24,7 +32,7 @@ const ProjectCardUI = (props)=>{
       <div className="card-body text-dark">
         <h4 className="card-title">{props.cardName}</h4>
         <p className="card-text text-secondary">
-          {props.cardDescription}
+          {displayPreview(props.cardDescription)}
           <a className="open-modal" onClick ={openModal}>read more</a>
         </p>
       </div>

@@ -18,7 +18,7 @@ class ProjectCards extends Component {
               cardDescription= "This is a dynamic card description"/>
           </div>
           <div className="col-md-5">
-            <ProjectCardUI 
+            <ProjectCardUI
               imgsrc={img1} 
               cardName="This is a Dynamic Card" 
               cardDescription= "This is a dynamic card description"/>
@@ -29,13 +29,13 @@ class ProjectCards extends Component {
           <div className="col-md-1">
           </div>
           <div className="col-md-5">
-          < ProjectCardUI 
+          < ProjectCardUI
               imgsrc={img1} 
               cardName="This is a Dynamic Card" 
               cardDescription= "This is a dynamic card description"/>
           </div>
           <div className="col-md-5">
-            <ProjectCardUI 
+            <ProjectCardUI
               imgsrc={img1} 
               cardName="This is a Dynamic Card" 
               cardDescription= "This is a dynamic card description"/>

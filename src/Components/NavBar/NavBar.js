@@ -13,14 +13,6 @@ function NavBar() {
     }
   }
 
-  const hideNavBar = () => {
-    if(window.scrollY >= 200) {
-      setNavbar(true)
-    } else {
-      setNavbar(false)
-    }
-  }
-
   window.addEventListener('scroll', changeBackground)
 
   return(
