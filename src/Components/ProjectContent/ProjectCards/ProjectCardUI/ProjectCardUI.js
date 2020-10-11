@@ -1,22 +1,41 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './ProjectCardUI.css'
+import Modal from '../Modal/Modal'
 
 const ProjectCardUI = (props)=>{
+  const[isOpen, setIsOpen] = useState(false)
+
+  function openModal() {
+    setIsOpen(true)
+    document.body.style.overflow = "hidden"
+  }
+
+  function closeModal() {
+    setIsOpen(false)
+    document.body.style.overflow = ""
+  }
+
   return(
     
-<div className="card text-center container-fluid d-flex">
-  <div className="overflow">
-    <img src={props.imgsrc} alt="Image1" className="card-img-top" />
-  </div>
-  <div className="card-body text-dark">
-    <h4 className="card-title">{props.cardName}</h4>
-    <p className="card-text text-secondary">
-    {props.cardDescription}
-    </p>
-  <a href="#" className="btn btn-outline-success download">Download</a>
-  </div>
-</div>
-    
+    <div className="card text-center container-fluid d-flex">
+      <div className="overflow">
+        <img src={props.imgsrc} alt="Image1" className="card-img-top" />
+      </div>
+      <div className="card-body text-dark">
+        <h4 className="card-title">{props.cardName}</h4>
+        <p className="card-text text-secondary">
+          {props.cardDescription}
+          <a className="open-modal" onClick ={openModal}>read more</a>
+        </p>
+      </div>
+      <Modal 
+        open={isOpen} 
+        onClose={closeModal}
+        title={props.cardName} 
+        image={props.imgsrc}
+        description={props.cardDescription}>
+      </Modal>
+    </div>
   )
 };
 

@@ -1,11 +1,12 @@
 .card{
-  width: 40em;
+  width: 20em;
   margin: 0 auto; 
   float: none; 
   margin-bottom: 10px; 
   max-width: 100%;
   z-index: 99;
 }
+
 .card:hover{
   box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.185)!important;
 }
