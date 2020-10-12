@@ -31,13 +31,20 @@ const ProjectCardUI = (props)=>{
     
     <div className="card text-center container-fluid p-0 d-flex">
       <div className="overflow">
-        <img src={props.imgsrc} alt="Image1" className="card-img-top" />
+      <div className="img-wrap">
+        <div className="overlay">
+          <div className="image__overlay">
+            <button className ="btn btn-outline-light" onClick ={openModal}>Learn more</button>
+          </div>
+        </div>
+          <img src={props.imgsrc} alt="Image1" className="card-img-top"/>
+        </div>
       </div>
       <div className="card-body text-dark">
         <h4 className="card-title">{props.cardName}</h4>
         <p className="card-text text-secondary">
           {displayPreview(props.cardDescription)}
-          <a className="open-modal" onClick ={openModal}>read more</a>
+          <a className="open-modal" onClick={openModal}>more</a>
         </p>
       </div>
       <Modal 

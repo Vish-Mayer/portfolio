@@ -2,8 +2,6 @@ import React from 'react'
 import Modal from './Modal'
 import ReactDom from 'react-dom'
 
-import testimage from '../../../../Assets/testimage.png'
-
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
@@ -15,20 +13,28 @@ describe('Modal', () => {
 
   let wrapper 
 
+  const props = {
+    open:(true),
+    onClose: jest.fn(),
+    title:"Test Modal Title",
+    image:"testimage.png",
+    description:"Test Modal Description"
+  }
+
   beforeEach(() => {
-    wrapper = shallow(
-      <Modal 
-        open={true}
-        title="Test Modal Title"
-        image={testimage}
-        description="Test Modal Description">
-      </Modal>
+    wrapper = shallow(<Modal {...props}/>
     )
   });
 
-  it('has a button that closes the modal', () => {
-    const button = wrapper.find('.close-modal').props().children
-    expect(button.props.src).toBe("dwn-arrowXS.png")
+  describe('close modal button', () => {
+    it('displays an image', () => {
+      const button = wrapper.find('.close-modal').props().children
+      expect(button.props.src).toBe("dwn-arrowXS.png")
+    })
+    it('has a button that closes the modal', () => {
+      wrapper.find('.close-modal').simulate('click')
+      expect(props.onClose).toHaveBeenCalled()
+    })
   })
 
   it('renders the project title', () => {
@@ -36,7 +42,7 @@ describe('Modal', () => {
   })
 
   it('renders the project image', () => {
-    expect(wrapper.find(".modal-img").props().src).toBe(testimage)
+    expect(wrapper.find(".modal-img").props().src).toBe("testimage.png")
   })
 
   it('renders the full project description', () => {

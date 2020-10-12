@@ -26,10 +26,6 @@ describe('ContactForm', () => {
     expect(wrapper.find('h4').text()).toEqual('Get in Touch!')
   });
 
-  it('has a button for a user to send a message', () => {
-    expect(wrapper.find('#send').text()).toBe("Send")
-  })
-
   describe('input name', () => {
     it('has an input for a user to insert their name', () => {
       const input = wrapper.find('#inputName')
@@ -60,5 +56,16 @@ describe('ContactForm', () => {
       const updateInput = simulateChange(wrapper, '#FormTextarea', "Test Message")
       expect(updateInput.props().value).toEqual("Test Message")
     })    
+  })
+
+  describe('send', () => {
+    it('has a button for a user to send a message', () => {
+      expect(wrapper.find('#send').text()).toBe("Send")
+    })
+    it('form runs send email function on click', () => {
+      const instance = (wrapper.find('.contact-form').props().children)
+      const sendEmail = jest.fn() 
+      expect(instance.props.onSubmit).toEqual[sendEmail]
+    })  
   })
 });

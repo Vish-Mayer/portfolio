@@ -10,7 +10,7 @@ export default function Modal({open, onClose, image, title, description}){
   return ReactDom.createPortal(
     <>
     <div id="overlay"/>
-    <div className=" modal card text-center d-flex" id="modal">
+    <div className="card text-center d-flex" id="modal">
       <button className="close-modal" onClick={onClose}><img src={icon} alt="left"/></button>
       <h3 className="card-title modal-title">{title}</h3>
       <img src={image} alt="project" className="modal-img"/>
