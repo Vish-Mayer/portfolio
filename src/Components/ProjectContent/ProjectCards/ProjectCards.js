@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import ProjectCardUI from './ProjectCardUI/ProjectCardUI'
 import img1 from '../../../Assets/testimage.png'
 import './ProjectCards.css'
-
 class ProjectCards extends Component {
  
   render(){

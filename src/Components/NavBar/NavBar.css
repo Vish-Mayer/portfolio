@@ -9,3 +9,7 @@
 .home1:hover{
   color: rgb(190, 190, 190);
 }
+
+.nav-item{
+  z-index: 0;
+}

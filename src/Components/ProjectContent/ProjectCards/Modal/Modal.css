@@ -1,5 +1,6 @@
 #modal{
-  height:42em;
+  padding-top:5em;
+  height:48em;
   width:50em;
   position: fixed;
   top: 50%;
@@ -7,14 +8,9 @@
   transform: translate(-50%, -50%);
   background-color: white;
   padding: 2em;
-  z-index: 1000;
+  z-index: 100001 !important;
   overflow: hidden;
   overflow-y: auto;
-}
-
-.modal-img{
-  max-height: 100%;
-  max-width: 100%;
 }
 
 #overlay{
@@ -24,8 +20,30 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.85);
-  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100000 !important;
 }
+
+.close-modal{
+  width: 30px;
+  top: 100%;
+  transform: rotate(90deg);
+  background: transparent;
+  border: none;
+}
+
+.modal-title {
+  text-decoration: lightskyblue solid overline;
+  padding-bottom:1em ;
+}
+
+.modal-img{
+  max-height: 100%;
+  max-width: 100%;
+  padding-bottom: 2em ;
+}
+
+
+
 
 

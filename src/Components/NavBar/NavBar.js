@@ -24,7 +24,6 @@ function NavBar() {
               Home
           </Link>
         </li>
-
         <li className="nav-item">
           <Link
             className={navbar ? "nav-link text-white about" : "nav-link text-secondary about"}

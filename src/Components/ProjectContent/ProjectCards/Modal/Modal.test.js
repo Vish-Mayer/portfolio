@@ -27,15 +27,16 @@ describe('Modal', () => {
   });
 
   it('has a button that closes the modal', () => {
-    expect(wrapper.find('#close-modal').text()).toBe("close")
+    const button = wrapper.find('.close-modal').props().children
+    expect(button.props.src).toBe("dwn-arrowXS.png")
   })
 
   it('renders the project title', () => {
     expect(wrapper.find('h3').props().children).toBe("Test Modal Title")
   })
 
-  it('renders the project title', () => {
-    expect(wrapper.find("img").props().src).toBe(testimage)
+  it('renders the project image', () => {
+    expect(wrapper.find(".modal-img").props().src).toBe(testimage)
   })
 
   it('renders the full project description', () => {
