@@ -32,7 +32,6 @@
 .card-img-top{
   display: inline-block; /* shrink wrap to image */
   overflow: hidden;
-  padding-top: 1em;
 }
 
 .card-img-top{
@@ -42,4 +41,5 @@
 .card-img-top:hover{
   filter: opacity(0.8) brightness(50%);
 }
+
 

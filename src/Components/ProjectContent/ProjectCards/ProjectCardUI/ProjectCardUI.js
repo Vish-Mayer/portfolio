@@ -29,7 +29,7 @@ const ProjectCardUI = (props)=>{
 
   return(
     
-    <div className="card text-center container-fluid d-flex">
+    <div className="card text-center container-fluid p-0 d-flex">
       <div className="overflow">
         <img src={props.imgsrc} alt="Image1" className="card-img-top" />
       </div>
