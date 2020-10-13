@@ -73,9 +73,9 @@ class ContactForm extends Component{
   render() {
     return(
       <div className = "container">
-        <div className="contact-form container-fluid d-flex bd-highlight" id="contact-form">
+        <div className="contact-form container-fluid d-flex justify-content-center bd-highlight" id="contact-form">
         <form onSubmit={this.sendEmail} data-testid="form">
-          <h4>Get in Touch!</h4>
+          <h5 className="contact-text">Have a question or want to work together?</h5>
           <div className="row">
             <div className="col">
               <input 

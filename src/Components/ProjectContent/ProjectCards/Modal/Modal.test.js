@@ -31,7 +31,7 @@ describe('Modal', () => {
       const button = wrapper.find('.close-modal').props().children
       expect(button.props.src).toBe("dwn-arrowXS.png")
     })
-    it('has a button that closes the modal', () => {
+    it('should call onClose', () => {
       wrapper.find('.close-modal').simulate('click')
       expect(props.onClose).toHaveBeenCalled()
     })

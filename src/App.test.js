@@ -7,6 +7,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import NavBar from './Components/NavBar/NavBar'
 import Home from './Pages/Home/Home';
 import Projects from './Pages/Projects/Projects';
+import Footer from './Components/Footer/Footer'
 
 import { Route } from 'react-router-dom';
 
@@ -28,6 +29,11 @@ describe('App', () => {
 
   it('displays the NavBar', () => {
     expect(wrapper.containsMatchingElement(<NavBar />)).toEqual(true);
+  });
+
+
+  it('displays the NavBar', () => {
+    expect(wrapper.containsMatchingElement(<Footer/>)).toEqual(true);
   });
 
   it('should show Home component for "/" route ', () => {

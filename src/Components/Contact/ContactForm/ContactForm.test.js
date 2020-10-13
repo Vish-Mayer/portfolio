@@ -23,7 +23,7 @@ describe('ContactForm', () => {
   }
 
   it('displays header for email component', () => {
-    expect(wrapper.find('h4').text()).toEqual('Get in Touch!')
+    expect(wrapper.find('h5').text()).toEqual('Have a question or want to work together?')
   });
 
   describe('input name', () => {
@@ -62,7 +62,7 @@ describe('ContactForm', () => {
     it('has a button for a user to send a message', () => {
       expect(wrapper.find('#send').text()).toBe("Send")
     })
-    it('form runs send email function on click', () => {
+    it('form runs send email function on submit', () => {
       const instance = (wrapper.find('.contact-form').props().children)
       const sendEmail = jest.fn() 
       expect(instance.props.onSubmit).toEqual[sendEmail]

@@ -5,7 +5,7 @@ describe('Projects', () => {
     cy.get('.project-content').contains('Projects')
   })
   
-  it('clicking on a projects "read more" opens up a pop up window', () => {
+  it('clicking "more" on a card opens up the full project details', () => {
     cy.visit('http://localhost:3000/projects/#project-content')
     cy.get('.open-modal').first().click()
     cy.contains('This is a dynamic card description').should('be.visible') 
