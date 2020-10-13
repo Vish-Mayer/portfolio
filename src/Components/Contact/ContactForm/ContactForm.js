@@ -76,7 +76,7 @@ class ContactForm extends Component{
         <div className="contact-form container-fluid d-flex justify-content-center bd-highlight" id="contact-form">
         <form onSubmit={this.sendEmail} data-testid="form">
           <h5 className="contact-text">Have a question or want to work together?</h5>
-          <div className="row">
+          <div className="row p-0">
             <div className="col">
               <input 
               value={this.state.message.name} 

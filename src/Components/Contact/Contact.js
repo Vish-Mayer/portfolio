@@ -1,6 +1,7 @@
 import React from 'react';
 import './Contact.css'
 import ContactForm from './ContactForm/ContactForm'
+import ContactFooter from './ContactFooter/ContactFooter'
 
 function Contact() {
   return(
@@ -9,6 +10,7 @@ function Contact() {
         <div className="contact-grid d-flex justify-content-center" id="contact-grid">
            <ContactForm/>
         </div>
+        <ContactFooter/>
     </div>
   )
 }

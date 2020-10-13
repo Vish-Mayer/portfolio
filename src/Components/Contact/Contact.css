@@ -1,12 +1,11 @@
 .contact-section{
-  background-color: rgb(42, 41, 46);
+  background: rgb(44, 43, 54);
   background-size: cover;
   background-position: center;
   border-radius: 0;
   width: 100%;
   position: relative;
   padding-top: 50px;
-  padding-bottom: 2em;
   color: rgb(255, 248, 239);
   }
 
