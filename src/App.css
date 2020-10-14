@@ -10,7 +10,7 @@
 }
 
 h1 {
-  text-decoration: lightskyblue solid overline;
+  text-decoration:  rgb(4, 80, 105) solid overline;
   text-decoration-skip: objects;
   text-align: center;
   padding-bottom: 2rem;

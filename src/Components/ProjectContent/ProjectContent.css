@@ -16,7 +16,7 @@
   top: 43%;
   background: rgb(44, 43, 54);
   transform: skew(10deg) rotate(10deg);
-  z-index: 0;
+  z-index: -10;
 }
 
 .project-content:before {
@@ -28,7 +28,7 @@
   top: 43%;
   background: rgb(44, 43, 54);
   transform: skew(-10deg) rotate(-10deg);
-  z-index: 0;
+  z-index: -10;
 }
 
 @media only screen and (max-width: 767px) {
@@ -39,9 +39,9 @@
     height: 100%;
     left: -50%;
     top: 25%;
-    background: rgb(42, 41, 46);
+    background: rgb(44, 43, 54);
     transform: skew(10deg) rotate(10deg);
-    z-index: 0;
+    z-index: -10;
   }
   }
 
@@ -53,9 +53,9 @@
       height: 100%;
       left: 50%;
       top: 25%;
-      background: rgb(42, 41, 46);
+      background: rgb(44, 43, 54);
       transform: skew(-10deg) rotate(-10deg);
-      z-index: 0;
+      z-index: -10;
     }
     }
   

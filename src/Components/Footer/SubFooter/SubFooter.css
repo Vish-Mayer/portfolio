@@ -1,0 +1,19 @@
+.sub-footer{
+  background: linear-gradient(to bottom, rgb(44, 43, 54) 0%,rgb(44, 43, 54) 50%,rgb(44, 43, 54)50%,rgb(35, 34, 39) 50%,rgb(35, 34, 39) 100%);
+  
+}
+
+.up-btn{
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.up-btn{
+  transform: scale(1);
+}
+
+.up-btn:hover{
+  transform: scale(1.05);
+}
+

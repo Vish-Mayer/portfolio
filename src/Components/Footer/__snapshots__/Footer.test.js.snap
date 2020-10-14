@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer it has a row of media buttons 1`] = `
+Object {
+  "children": Array [
+    <div
+      className="col-md-4 col-4"
+    >
+      <button
+        className="media-btn"
+      >
+        <img
+          alt="media1"
+          className="media-img"
+          src="linkedinS.png"
+        />
+      </button>
+    </div>,
+    <div
+      className="col-md-4 col-4"
+    >
+      <button
+        className="media-btn"
+      >
+        <img
+          alt="media2"
+          className="media-img"
+          src="github.png"
+        />
+      </button>
+    </div>,
+    <div
+      className="col-md-4 col-4"
+    >
+      <button
+        className="media-btn"
+      >
+        <img
+          alt="media3"
+          className="media-img"
+          src="cvlogo2.png"
+        />
+      </button>
+    </div>,
+  ],
+  "className": "media-row row p-0",
+}
+`;

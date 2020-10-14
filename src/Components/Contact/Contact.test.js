@@ -4,6 +4,7 @@ import Contact from './Contact';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import ContactForm from './ContactForm/ContactForm';
+import SubFooter from '../Footer/SubFooter/SubFooter';
 
 configure({ adapter: new Adapter() });
 
@@ -21,5 +22,9 @@ describe('Contact', () => {
 
   it('displays the contact form', () => {
     expect(wrapper.containsMatchingElement(<ContactForm />)).toEqual(true);
+  })
+
+  it('displays the sub-footer', () => {
+    expect(wrapper.containsMatchingElement(<SubFooter />)).toEqual(true);
   })
 });

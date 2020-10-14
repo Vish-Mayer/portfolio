@@ -109,7 +109,7 @@ class ContactForm extends Component{
               cols ="70" 
               rows="10"></textarea>
             </div>
-            <button type="submit" className="btn btn-primary" id="send">Send</button>
+            <button type="submit" className="btn btn-outline-light" id="send">Send</button>
           </form>
       </div>
       <div>

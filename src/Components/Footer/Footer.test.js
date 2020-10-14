@@ -14,7 +14,7 @@ describe('Footer', () => {
     wrapper = shallow(<Footer/>)
   });
 
-  it('does not do anything yet!', () => {
-    
+  it('it has a row of media buttons', () => {
+    expect(wrapper.find('.media-row').props()).toMatchSnapshot()
   });
 });
