@@ -23,6 +23,7 @@ class ContactForm extends Component {
     this.handleInput2 = this.handleInput2.bind(this);
     this.handleInput3 = this.handleInput3.bind(this);
     this.sendEmail = this.sendEmail.bind(this)
+    this.submitForm = this.submitForm.bind(this)
   }
 
   handleInput1(e) {
@@ -86,26 +87,33 @@ class ContactForm extends Component {
   }
 
   sendEmail(e) {
+    
+      emailjs.sendForm(service_id, template_id, e.target, user_id)
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+  }
+
+  submitForm(e) {
     e.preventDefault();
     const isValid = this.validateForm();
     if (isValid) {
-      // emailjs.sendForm(service_id, template_id, e.target, user_id)
-      // .then((result) => {
-      //     console.log(result.text);
-      // }, (error) => {
-      //     console.log(error.text);
-      // });
+      this.sendEmail(e)
       window.alert('Your message has been sent');
       e.target.reset()
       this.resetForm()
     }
+
   }
 
   render() {
     return (
       <div className="container">
         <div className="contact-form container-fluid d-flex justify-content-center bd-highlight" id="contact-form">
-          <form onSubmit={this.sendEmail} data-testid="form">
+          <form onSubmit={this.submitForm} data-testid="form">
             <h5 className="contact-text">Have a question or want to work together?</h5>
 
             <div className="form-group">
