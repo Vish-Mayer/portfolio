@@ -45,7 +45,7 @@ describe('ContactForm', () => {
     it('saves the email to the current state', () => {
       const updateInput = simulateChange(wrapper, '#inputEmail', "test@test.com")
       expect(updateInput.props().value).toEqual("test@test.com")
-    })   
+    }) 
   })
 
   describe('input message', () => {

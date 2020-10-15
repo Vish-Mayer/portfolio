@@ -1,21 +1,23 @@
+import React, { Component } from 'react';
 import emailjs from 'emailjs-com';
 import './ContactForm.css'
-import React, { Component } from 'react';
 
 const service_id = process.env.REACT_APP_SERVICE_ID
-const template_id =  process.env.REACT_APP_TEMPLATE_ID
+const template_id = process.env.REACT_APP_TEMPLATE_ID
 const user_id = process.env.REACT_APP_USER_ID
 
-class ContactForm extends Component{
+const expression = /(?!.*\.{2})^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i
+class ContactForm extends Component {
 
   constructor(props) {
     super(props)
-    this.state={
-      message:{
-        name: '',
-        email: '',
-        body: '',
-      }
+    this.state = {
+      name: '',
+      email: '',
+      message: '',
+      nameError: '',
+      emailError: '',
+      messageError: '',
     }
     this.handleInput1 = this.handleInput1.bind(this);
     this.handleInput2 = this.handleInput2.bind(this);
@@ -24,96 +26,132 @@ class ContactForm extends Component{
   }
 
   handleInput1(e) {
-    this.setState ({
-      message:{
-        name: e.target.value 
-      }
+    this.setState({
+      name: e.target.value
     })
   }
 
   handleInput2(e) {
-    this.setState ({
-      message:{
-        email: e.target.value
-      }
+    this.setState({
+      email: e.target.value
     })
   }
 
   handleInput3(e) {
-    this.setState ({
-      message:{
-        body: e.target.value
-      }
+    this.setState({
+      message: e.target.value
     })
+  }
+
+  validateForm() {
+    let emailError = ''
+    let nameError = '';
+    let messageError = '';
+
+    if (this.state.name.length < 1) {
+      nameError = "Please enter a name"
+      this.setState({
+        nameError: nameError
+      })
+      return false
+    }
+    const email = this.state.email
+    if (!email.match(expression)) {
+      emailError = "Please enter a valid email address"
+      this.setState({
+        emailError: emailError
+      })
+      return false
+    }
+
+    if (this.state.message.length <= 2) {
+      messageError = "Please enter a message"
+      this.setState({
+        messageError: messageError
+      })
+      return false
+    }
+    return true
   }
 
   resetForm() {
     this.setState({
-      message:{
-        name: '',
-        email: '',
-        body: '',
-      }
+      name: '',
+      email: '',
+      message: '',
+      nameError: '',
+      emailError: '',
+      messageError: '',
     })
   }
 
-  sendEmail(e){
+  sendEmail(e) {
     e.preventDefault();
-    emailjs.sendForm(service_id, template_id, e.target, user_id)
-    .then((result) => {
-        console.log(result.text);
-    }, (error) => {
-        console.log(error.text);
-    });
+    const isValid = this.validateForm();
+    if (isValid) {
+      // emailjs.sendForm(service_id, template_id, e.target, user_id)
+      // .then((result) => {
+      //     console.log(result.text);
+      // }, (error) => {
+      //     console.log(error.text);
+      // });
       window.alert('Your message has been sent');
       e.target.reset()
       this.resetForm()
+    }
   }
 
   render() {
-    return(
-      <div className = "container">
+    return (
+      <div className="container">
         <div className="contact-form container-fluid d-flex justify-content-center bd-highlight" id="contact-form">
-        <form onSubmit={this.sendEmail} data-testid="form">
-          <h5 className="contact-text">Have a question or want to work together?</h5>
-          <div className="row p-0">
-            <div className="col">
-              <input 
-              value={this.state.message.name} 
-              onChange={this.handleInput1} 
-              type="text" 
-              className="form-control" 
-              id="inputName" 
-              placeholder="Name" 
-              name="user_name"/>
-            </div>
-          </div><br/>
-          <div className="form-group">
-            <input
-              value={this.state.message.email} 
-              onChange={this.handleInput2} 
-              type="email" 
-              className="form-control"
-              id="inputEmail" 
-              placeholder="Email address" 
-              name="user_email"/>
-            </div>
+          <form onSubmit={this.sendEmail} data-testid="form">
+            <h5 className="contact-text">Have a question or want to work together?</h5>
+
             <div className="form-group">
-              <label id ="input-message" for="FormTextarea">Your Message</label>
-              <textarea 
-              value={this.state.message.body} 
-              onChange={this.handleInput3} 
-              className="form-control" 
-              id="FormTextarea"
-              name="message" 
-              cols ="70" 
-              rows="10"></textarea>
+              <input
+                value={this.state.name}
+                onChange={this.handleInput1}
+                type="text"
+                className="form-control"
+                id="inputName"
+                placeholder="Name"
+                name="user_name"
+              />
+              <label className="form-error" id="name-error" for="inutName">{this.state.nameError}</label>
+            </div>
+
+            <div className="form-group">
+              <input
+                value={this.state.email}
+                onChange={this.handleInput2}
+                type="email"
+                className="form-control"
+                id="inputEmail"
+                placeholder="Email address"
+                name="user_email"
+              />
+              <label className="form-error" id="email-error" for="inutEmail">{this.state.emailError}</label>
+            </div>
+
+            <div className="form-group">
+              <label id="input-message" for="FormTextarea">Your Message</label>
+              <textarea
+                value={this.state.message}
+                onChange={this.handleInput3}
+                className="form-control"
+                id="FormTextarea"
+                name="message"
+                cols="70"
+                rows="10"
+              ></textarea>
+              <label className="form-error" id="message-error" for="FormTextarea">{this.state.messageError}</label>
             </div>
             <button type="submit" className="btn btn-outline-light" id="send">Send</button>
           </form>
-      </div>
-      <div>
         </div>
+        <div>
+      </div>
     </div>
     )
   }

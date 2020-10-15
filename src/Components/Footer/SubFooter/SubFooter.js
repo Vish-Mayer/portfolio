@@ -12,7 +12,7 @@ function SubFooter() {
   }
   return(
     <div className="sub-footer d-flex justify-content-center" id="contact">
-       <button className="up-btn" onClick={scrollToTop}>
+       <button className="up-btn btn" onClick={scrollToTop}>
           <img src={icon} alt="up"/>
         </button>
       </div>

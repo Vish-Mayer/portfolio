@@ -1,7 +1,6 @@
 import React from 'react';
 import './ProjectContent.css'
 import ProjectCards from './ProjectCards/ProjectCards'
-import SubFooter from '../Footer/SubFooter/SubFooter'
 
 function ProjectContent() {
 
@@ -10,7 +9,6 @@ function ProjectContent() {
     <h1>Projects</h1>
     These are some things that Ive made.
     <ProjectCards/>
-    <SubFooter />
   </div>
   )
 }

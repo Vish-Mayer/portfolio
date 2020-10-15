@@ -23,8 +23,4 @@ describe('ProjectContent', () => {
   it('displays the project cards', () => {
     expect(wrapper.containsMatchingElement(<ProjectCards />)).toEqual(true);
   });
-
-  it('displays the sub footer', () => {
-    expect(wrapper.containsMatchingElement(<SubFooter />)).toEqual(true);
-  });
 });

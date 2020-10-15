@@ -23,8 +23,4 @@ describe('Contact', () => {
   it('displays the contact form', () => {
     expect(wrapper.containsMatchingElement(<ContactForm />)).toEqual(true);
   })
-
-  it('displays the sub-footer', () => {
-    expect(wrapper.containsMatchingElement(<SubFooter />)).toEqual(true);
-  })
 });

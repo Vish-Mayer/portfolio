@@ -24,6 +24,28 @@ describe('Contact Form', () => {
     cy.get('#FormTextarea').should('have.value', 'This is a test message, can you help?');
   })
 
+  it('user must fill in name', () => {
+    redirectFromHome('#contact')
+    cy.get('#send').click() 
+    cy.contains('Please enter a name').should('be.visible') 
+  })
+
+  it('user must fill in a valid email', () => {
+    redirectFromHome('#contact')
+    cy.get('#inputName').type('a')
+    cy.get('#send').click()
+    cy.get('#inputEmail').type('testmail.com')
+    cy.contains('Please enter a valid email').should('be.visible') 
+  })
+
+  it('user must fill in a message', () => {
+    redirectFromHome('#contact')
+    cy.get('#inputName').type('Michael Scofield')
+    cy.get('#inputEmail').type('test@testingcypress.com')
+    cy.get('#send').click() 
+    cy.contains('Please enter a message').should('be.visible') 
+  })
+
   it('sends an email and resets the input fields..', () => {
     redirectFromHome('#contact')
     cy.get('#inputName').type('Michael Scofield')
