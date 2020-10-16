@@ -13,8 +13,8 @@ export default function Modal({open, onClose, image, title, description}){
     <div id="overlay"/>
     <div className="card text-center d-flex" id="modal">
       <button className="close-modal" onClick={onClose}><img src={icon} alt="left"/></button>
-      {/* <img src={image} alt="project" className="modal-img"/> */}
-      <div className="modal-img"><Carousel image1={image} /></div>
+    
+      <div className="modal-img"><Carousel  /></div>
       <h3 className="card-title modal-title">{title}</h3>
       <p className="modal-description">{description}</p>
     </div>
