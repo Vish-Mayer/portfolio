@@ -1,20 +1,22 @@
 import React from 'react'
 import ProjectCardUI from './ProjectCardUI'
-
+import Modal from '../Modal/Modal'
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
-
 describe('Projects', () => {
+  
 
   let wrapper;
   
   const props = {
     cardName:"Test Title",
-    cardDescription:"Testing a really long description with thats longer than 10 words",
+    cardDescription:"Testing a really long description that is longer than 10 words",
     imgsrc:"testimage.png",
-    openModal: jest.fn
+    imgsrc2:"testimage2.png",
+    imgsrc3:"testimage3.png",
+    imgsrc4:"testimage4.png",
   }
   
   beforeEach(() => {
@@ -31,7 +33,7 @@ describe('Projects', () => {
   });
 
   it('shows preview by displaying the first 10 letters of a description', () => {
-    const output = "Testing a really long description with thats longer than 10..."
+    const output = "Testing a really long description that is longer than 10..."
     expect(wrapper.find('.card-text').text()).toContain(output)
   });
 
@@ -47,5 +49,17 @@ describe('Projects', () => {
   it('runs openModal function on click', () => {
     const openModal = jest.fn()
     expect(wrapper.find('.btn').props().onClick).toBe[openModal]
+  });
+
+  it('renders the carousel', () => {
+    expect(wrapper.containsMatchingElement(<Modal />)).toEqual(true);
+  })
+
+  it('passes image props to the Modal', () => {
+    const cardprops = wrapper.find('.card-modal-props').props().children
+    expect(cardprops.props.image).toEqual('testimage.png')
+    expect(cardprops.props.image2).toEqual('testimage2.png')
+    expect(cardprops.props.image3).toEqual('testimage3.png')
+    expect(cardprops.props.image4).toEqual('testimage4.png')
   });
 });

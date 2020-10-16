@@ -47,15 +47,19 @@ const ProjectCardUI = (props)=>{
           <a className="open-modal" onClick={openModal}>more</a>
         </p>
       </div>
-      <Modal 
+      <div className ="card-modal-props">
+      <Modal
         open={isOpen} 
         onClose={closeModal}
         title={props.cardName} 
         image={props.imgsrc}
+        image2={props.imgsrc2}
+        image3={props.imgsrc3}
+        image4={props.imgsrc4}
         description={props.cardDescription}>
       </Modal>
+      </div>
     </div>
   )
 };
-
 export default ProjectCardUI;

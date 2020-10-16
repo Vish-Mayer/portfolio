@@ -3,20 +3,24 @@ import Carousel from './Carousel'
 
 import { configure, shallow,} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { exportAllDeclaration, jsxEmptyExpression } from '@babel/types';
-import { EmailJSResponseStatus } from 'emailjs-com';
+import { jsxEmptyExpression } from '@babel/types';
 
 configure({ adapter: new Adapter() });
+
 
 describe('Carousel', () => {
 
   let wrapper
-  
-  let sliderArray = [1,2,3,4]
 
-  
+  const props = {
+    img1:"testimage1.jpg",
+    img2:"testimage2.jpg",
+    img3:"testimage3.jpg",
+    img4:"testimage4.jpg",
+}
+   
   beforeEach(() => {
-    wrapper = shallow(<Carousel/>);
+    wrapper = shallow(<Carousel {...props}/>);
   })
 
   it('renders a button that goes left', () => {

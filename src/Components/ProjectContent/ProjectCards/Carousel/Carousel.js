@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './Carousel.scss'
  
-export default function Carousel() {
+export default function Carousel({img1, img2, img3, img4}) {
 
-  let sliderArray = [1,2,3,4]
+  let sliderArray = [img1, img2, img3, img4]
 
   const [x, setX] = useState(0)
 
@@ -22,7 +22,7 @@ export default function Carousel() {
         sliderArray.map((item, index) => {
           return(
             <div key={index} className="slider" style={{transform:`translateX(${x}%)`}}>
-              {item}
+              <img className="carousel-img" src={item}></img>
             </div>
           )
         })

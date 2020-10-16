@@ -10,12 +10,23 @@ describe('Projects', () => {
 
   let wrapper;
   
+  // const props = {
+  //   img1:"img1"
+  // }
+  
   beforeEach(() => {
-    wrapper = shallow(<ProjectCards/>)
+    wrapper = shallow(<ProjectCards  />)
   });
 
   it('project cards class matches snapshot', () => {
-    const output = wrapper.find('.project-cards').props("className")
-    expect(JSON.stringify(output)).toMatchSnapshot()
+    const output = wrapper.find('.project-cards').props("className");
+    expect(JSON.stringify(output)).toMatchSnapshot();
+  });
+
+  it('project cards class matches snapshot', () => {
+    const img="test.com";
+    const project = wrapper.find('#project1').props().imgsrc;
+    wrapper.setProps({ img });
+    
   });
 });

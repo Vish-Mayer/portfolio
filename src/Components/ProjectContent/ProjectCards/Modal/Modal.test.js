@@ -19,6 +19,9 @@ describe('Modal', () => {
     onClose: jest.fn(),
     title:"Test Modal Title",
     image:"testimage.png",
+    image2:"testimage2.png",
+    image3:"testimage3.png",
+    image4:"testimage4.png",
     description:"Test Modal Description"
   }
 
@@ -44,6 +47,17 @@ describe('Modal', () => {
 
   it('renders the carousel', () => {
     expect(wrapper.containsMatchingElement(<Carousel />)).toEqual(true);
+  })
+
+  it('passes image props to the carousel', () => {
+    const images = wrapper.find('.modal-img').props().children;
+    const imageArray = {
+      img1: 'testimage.png',
+      img2: 'testimage2.png',
+      img3: 'testimage3.png',
+      img4: 'testimage4.png'
+    }
+    expect(images.props).toEqual(imageArray)
   })
 
   it('renders the full project description', () => {
