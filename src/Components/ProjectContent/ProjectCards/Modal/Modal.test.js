@@ -4,6 +4,7 @@ import ReactDom from 'react-dom'
 
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import Carousel from '../Carousel/Carousel';
 
 configure({ adapter: new Adapter() });
 
@@ -41,8 +42,8 @@ describe('Modal', () => {
     expect(wrapper.find('h3').props().children).toBe("Test Modal Title")
   })
 
-  it('renders the project image', () => {
-    expect(wrapper.find(".modal-img").props().src).toBe("testimage.png")
+  it('renders the carousel', () => {
+    expect(wrapper.containsMatchingElement(<Carousel />)).toEqual(true);
   })
 
   it('renders the full project description', () => {

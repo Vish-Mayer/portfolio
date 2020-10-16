@@ -44,6 +44,17 @@ class ContactForm extends Component {
     })
   }
 
+  resetForm() {
+    this.setState({
+      name: '',
+      email: '',
+      message: '',
+      nameError: '',
+      emailError: '',
+      messageError: '',
+    })
+  }
+
   validateForm() {
     let emailError = ''
     let nameError = '';
@@ -65,6 +76,14 @@ class ContactForm extends Component {
       return false
     }
 
+    if (this.state.email.length < 9) {
+      emailError = "Please enter a valid email address"
+      this.setState({
+        emailError: emailError
+      })
+      return false
+    }
+
     if (this.state.message.length <= 2) {
       messageError = "Please enter a message"
       this.setState({
@@ -75,26 +94,13 @@ class ContactForm extends Component {
     return true
   }
 
-  resetForm() {
-    this.setState({
-      name: '',
-      email: '',
-      message: '',
-      nameError: '',
-      emailError: '',
-      messageError: '',
-    })
-  }
-
   sendEmail(e) {
-    
-      emailjs.sendForm(service_id, template_id, e.target, user_id)
+    emailjs.sendForm(service_id, template_id, e.target, user_id)
       .then((result) => {
-          console.log(result.text);
+        console.log(result.text);
       }, (error) => {
-          console.log(error.text);
+        console.log(error.text);
       });
-
   }
 
   submitForm(e) {
@@ -106,7 +112,6 @@ class ContactForm extends Component {
       e.target.reset()
       this.resetForm()
     }
-
   }
 
   render() {
@@ -159,8 +164,8 @@ class ContactForm extends Component {
           </form>
         </div>
         <div>
+        </div>
       </div>
-    </div>
     )
   }
 }
