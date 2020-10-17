@@ -11,9 +11,12 @@ export default function Modal({open, onClose, image, image2, image3, image4, tit
     <>
     <div id="overlay"/>
     <div className="card text-center d-flex" id="modal">
+
       <div className="modal-img">
         <Carousel img1={image} img2={image2} img3={image3} img4={image4}/>
       </div> 
+
+      <div><button onClick={onClose} className="btn-outline-info close-modal-main">Back to projects</button></div>
 
       <h3 className="card-title modal-title">{title}</h3>
 

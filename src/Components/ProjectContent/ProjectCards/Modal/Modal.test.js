@@ -17,6 +17,7 @@ describe('Modal', () => {
 
   const props = {
     open:(true),
+    onClose: jest.fn(),
     title:"Test Modal Title",
     image:"testimage.png",
     image2:"testimage2.png",
@@ -29,6 +30,16 @@ describe('Modal', () => {
     wrapper = shallow(<Modal {...props}/>
     )
   });
+
+  describe('back to projects', () => {
+    it('displays a closing image', () => {
+      expect(wrapper.find('.close-modal-main').text()).toBe("Back to projects")
+    })
+    it('should call onClose', () => {
+      wrapper.find('.close-modal-main').simulate('click')
+      expect(props.onClose).toHaveBeenCalled()
+    })
+  })
 
   it('renders the project title', () => {
     expect(wrapper.find('h3').props().children).toBe("Test Modal Title")
