@@ -4,7 +4,8 @@ import ReactDom from 'react-dom'
 
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import Carousel from '../Carousel/Carousel';
+import Carousel from './Carousel/Carousel';
+import ModalFooter from './ModalFooter/ModalFooter'
 
 configure({ adapter: new Adapter() });
 
@@ -16,7 +17,6 @@ describe('Modal', () => {
 
   const props = {
     open:(true),
-    onClose: jest.fn(),
     title:"Test Modal Title",
     image:"testimage.png",
     image2:"testimage2.png",
@@ -29,21 +29,6 @@ describe('Modal', () => {
     wrapper = shallow(<Modal {...props}/>
     )
   });
-
-  describe('close modal button', () => {
-    it('displays a closing image', () => {
-      const button = wrapper.find('.close-modal').props().children
-      expect(button.props.src).toBe("closeXS.png")
-    })
-    it('should call onClose', () => {
-      wrapper.find('.close-modal').simulate('click')
-      expect(props.onClose).toHaveBeenCalled()
-    })
-  })
-
-  it('shows a button to view the project site', () => {
-    expect(wrapper.find('.ext-link').text()).toBe("View in github")
-  })
 
   it('renders the project title', () => {
     expect(wrapper.find('h3').props().children).toBe("Test Modal Title")
@@ -66,6 +51,10 @@ describe('Modal', () => {
 
   it('renders the full project description', () => {
     expect(wrapper.find('.modal-description').props().children).toBe("Test Modal Description")
+  })
+
+  it('renders the Modal Footer', () => {
+    expect(wrapper.containsMatchingElement(<ModalFooter />)).toEqual(true);
   })
 });
 

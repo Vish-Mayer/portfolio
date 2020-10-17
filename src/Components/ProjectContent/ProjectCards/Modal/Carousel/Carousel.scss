@@ -36,11 +36,22 @@
   background: none;
   border: none;
   outline: none;
+  transition: 0.5s;
 }
 
 #goLeft{
   left: 0;
   @extend %btn-styles;
+}
+
+#goLeft:hover{
+  transition: 0.5s;
+  background: rgba(0, 0, 0, 0.103);
+}
+
+#goRight:hover{
+  transition: 0.5s;
+  background: rgba(0, 0, 0, 0.144);
 }
 
 #goRight{

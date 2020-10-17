@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Carousel.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import icon from '../../../../Assets/whitearrowXS.png'
+import icon from '../../../../../Assets/whitearrowXS.png'
  
 export default function Carousel({img1, img2, img3, img4}) {
 

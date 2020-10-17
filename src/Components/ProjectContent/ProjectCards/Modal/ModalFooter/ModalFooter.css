@@ -1,0 +1,14 @@
+.modal-footer{
+  background: white;
+  height: 15vh;
+}
+
+.close-modal{
+  position: absolute;
+  right: 25x;
+}
+
+.ext-link{
+  position: absolute;
+  left: 0px;
+}

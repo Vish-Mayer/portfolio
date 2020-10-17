@@ -1,9 +1,8 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import './Modal.css'
-import Carousel from '../Carousel/Carousel'
-import icon from '../../../../Assets/closeXS.png'
-import icon2 from '../../../../Assets/github.png'
+import Carousel from './Carousel/Carousel'
+import ModalFooter from './ModalFooter/ModalFooter'
 
 export default function Modal({open, onClose, image, image2, image3, image4, title, description}){
   if (!open) return null
@@ -20,13 +19,9 @@ export default function Modal({open, onClose, image, image2, image3, image4, tit
 
       <p className="modal-description">{description}</p> 
 
-      <button className="close-modal btn" onClick={onClose}>
-        <img src={icon}/>
-      </button>
-
-      <button className="ext-link btn">
-        <img src={icon2} /><h5>View in github</h5>
-      </button>
+      <div className="modalfooter-display">
+        <ModalFooter onClose={onClose}/>
+      </div>
     </div>
     </>,
     document.getElementById('portal')

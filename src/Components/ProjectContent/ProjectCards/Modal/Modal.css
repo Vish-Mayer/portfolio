@@ -23,18 +23,6 @@
   z-index: 100000 !important;
 }
 
-.close-modal{
-  position: absolute;
-  bottom: 0px;
-  right: 0px
-}
-
-.ext-link{
-  position: absolute;
-  bottom: 10px;
-  left: 10px
-}
-
 .modal-title {
   padding-top: 1em;
   padding-bottom:1em ;
@@ -42,6 +30,11 @@
 
 .modal-description{
   padding-bottom:2em ;
+}
+
+.modalfooter-display{
+  bottom: -6em;
+  width: 100%;
 }
 
 .modal-img{
