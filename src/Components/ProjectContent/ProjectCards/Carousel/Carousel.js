@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Carousel.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import icon from '../../../../Assets/whitearrowXS.png'
  
 export default function Carousel({img1, img2, img3, img4}) {
 
@@ -27,8 +29,12 @@ export default function Carousel({img1, img2, img3, img4}) {
           )
         })
       }
-      <button id="goLeft" onClick={goLeft}>Left</button>
-      <button id="goRight" onClick={goRight}>Right</button>
+      <button id="goLeft" onClick={goLeft}>
+      <img src={icon}/>
+      </button>
+      <button id="goRight" onClick={goRight}>
+      <img id="right-icon" src={icon}/>
+      </button>
     </div>
   );
 }

@@ -24,22 +24,30 @@
 }
 
 .close-modal{
-  width: 30px;
-  top: 100%;
-  transform: rotate(90deg);
-  background: transparent;
-  border: none;
+  position: absolute;
+  bottom: 0px;
+  right: 0px
+}
+
+.ext-link{
+  position: absolute;
+  bottom: 10px;
+  left: 10px
 }
 
 .modal-title {
-  text-decoration: lightskyblue solid overline;
+  padding-top: 1em;
   padding-bottom:1em ;
+}
+
+.modal-description{
+  padding-bottom:2em ;
 }
 
 .modal-img{
   max-height: 100%;
   max-width: 100%;
-  padding-bottom: 2em ;
+  border-bottom: 3px solid rgb(4, 80, 105);
 }
 
 

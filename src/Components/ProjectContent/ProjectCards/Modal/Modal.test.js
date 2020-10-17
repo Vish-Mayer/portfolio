@@ -31,14 +31,18 @@ describe('Modal', () => {
   });
 
   describe('close modal button', () => {
-    it('displays an image', () => {
+    it('displays a closing image', () => {
       const button = wrapper.find('.close-modal').props().children
-      expect(button.props.src).toBe("dwn-arrowXS.png")
+      expect(button.props.src).toBe("closeXS.png")
     })
     it('should call onClose', () => {
       wrapper.find('.close-modal').simulate('click')
       expect(props.onClose).toHaveBeenCalled()
     })
+  })
+
+  it('shows a button to view the project site', () => {
+    expect(wrapper.find('.ext-link').text()).toBe("View in github")
   })
 
   it('renders the project title', () => {
