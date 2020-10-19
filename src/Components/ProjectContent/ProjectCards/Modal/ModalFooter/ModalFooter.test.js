@@ -12,6 +12,7 @@ describe('ModalFooter', () => {
 
   const props = {
     onClose: jest.fn(),
+    projectLink: "test.com",
   }
 
   beforeEach(() => {
@@ -23,6 +24,10 @@ describe('ModalFooter', () => {
     expect(wrapper.find('.ext-link').text()).toBe("View in github")
   })
 
+  it('routes to the given link', () => {
+    expect(wrapper.find('.ext-link').props().href).toBe("test.com")
+  })
+ 
   describe('close modal button', () => {
     it('displays a closing image', () => {
       const button = wrapper.find('.close-modal').props().children

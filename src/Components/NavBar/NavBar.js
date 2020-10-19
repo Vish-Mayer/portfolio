@@ -21,14 +21,14 @@ function NavBar() {
           <Link
             className={navbar ? "nav-link home home1" : "nav-link text-secondary home home2"}
             smooth to="/#home">
-              Home
+              HOME
           </Link>
         </li>
         <li className="nav-item">
           <Link
             className={navbar ? "nav-link text-white about" : "nav-link text-secondary about"}
             smooth to="/#about">
-              About
+              ABOUT
           </Link>
         </li>
 
@@ -36,7 +36,7 @@ function NavBar() {
           <Link
             className={navbar ? "nav-link text-white projects" : "nav-link text-secondary projects"}
             smooth to="/projects/#project-content">
-              Projects
+              PROJECTS
           </Link>
         </li>
 
@@ -44,7 +44,7 @@ function NavBar() {
           <Link
             className={navbar ? "nav-link text-white contact" : "nav-link text-secondary contact"}
             smooth to="/#contact">
-              Contact 
+              CONTACT
           </Link>
         </li>
       </ul>

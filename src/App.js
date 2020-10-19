@@ -5,24 +5,35 @@ import Projects from './Pages/Projects/Projects';
 import NavBar from './Components/NavBar/NavBar'
 import Footer from './Components/Footer/Footer'
 import SubFooter from './Components/Footer/SubFooter/SubFooter'
+import PageNotFound from './Pages/404'
 import './App.css';
-import { BrowserRouter ,Switch, Route, } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 class App extends Component {
-  
+
+  routeHome(){
+    return(
+     <Home/>
+    )
+  }
+
+  routeProjects(){
+    return(
+      <Projects/>
+    )
+  }
+
   render() {
     return (
       <div className="body">
       <div className="App">
-      <div id="rectangle"></div>
-        <BrowserRouter>
           <NavBar />
           <Switch>
-            <Route path="/" component={Home} exact={true} />
-            <Route path="/projects" component={Projects} />
+            <Route path="/" exact render={this.routeHome} />
+            <Route exact path="/projects" render={this.routeProjects} /> 
+            <Redirect to="/404" /> 
           </Switch>
           <SubFooter/>
           <Footer />
-        </BrowserRouter>
       </div>
       </div>
     );

@@ -10,6 +10,7 @@
   background-color: white;
   z-index: 100001 !important;
   overflow-y: auto;
+  color: rgb(105, 105, 105)
 }
 
 #overlay{
@@ -24,18 +25,31 @@
 }
 
 .modal-title {
-  padding-top: 1em;
-  padding-bottom:1em ;
+  padding-top: 1em ;
+}
+
+.modal-info{
+  margin: 2em;
+  margin-top: 0em
 }
 
 .modal-description{
-  padding-bottom:2em ;
+  padding-top: 1em;
+  
+}
+
+.modal-tech-stack{
+  color: rgb(153, 153, 153);
 }
 
 .close-modal-main{
   background: none;
   border: none;
   border-radius: 100px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
 }
 
 .modalfooter-display{
@@ -44,9 +58,11 @@
 }
 
 .modal-img{
+  height: 49vh;
   max-height: 100%;
   max-width: 100%;
   border-bottom: 3px solid rgb(4, 80, 105);
+
 }
 
 

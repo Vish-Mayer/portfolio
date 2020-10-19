@@ -23,7 +23,8 @@ describe('Modal', () => {
     image2:"testimage2.png",
     image3:"testimage3.png",
     image4:"testimage4.png",
-    description:"Test Modal Description"
+    description:"Test Modal Description",
+    techStack: "Test Stack",
   }
 
   beforeEach(() => {
@@ -41,10 +42,6 @@ describe('Modal', () => {
     })
   })
 
-  it('renders the project title', () => {
-    expect(wrapper.find('h3').props().children).toBe("Test Modal Title")
-  })
-
   it('renders the carousel', () => {
     expect(wrapper.containsMatchingElement(<Carousel />)).toEqual(true);
   })
@@ -58,6 +55,14 @@ describe('Modal', () => {
       img4: 'testimage4.png'
     }
     expect(images.props).toEqual(imageArray)
+  })
+
+  it('renders the project title', () => {
+    expect(wrapper.find('h3').props().children).toBe("Test Modal Title")
+  })
+
+  it('renders the project title', () => {
+    expect(wrapper.find('.modal-tech-stack').props().children).toBe("Test Stack")
   })
 
   it('renders the full project description', () => {

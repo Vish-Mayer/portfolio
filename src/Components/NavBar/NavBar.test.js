@@ -16,7 +16,7 @@ describe('NavBar', () => {
 
   describe('Home', () => {
     it('renders a tab with text "Home"', () => {
-      expect(wrapper.find(".home").props().children).toBe("Home")
+      expect(wrapper.find(".home").props().children).toBe("HOME")
     })
     it('navigates the user to the home section', () => {
       expect(wrapper.find(".home").props().to).toBe('/#home')
@@ -25,7 +25,7 @@ describe('NavBar', () => {
   
   describe('About', () => {
     it('renders a tab with text "About"', () => {
-      expect(wrapper.find(".about").props().children).toBe("About")
+      expect(wrapper.find(".about").props().children).toBe("ABOUT")
     })
     it('navigates the user to about section', () => {
       expect(wrapper.find(".about").props().to).toBe('/#about')
@@ -37,7 +37,7 @@ describe('NavBar', () => {
 
   describe('Projects', () => {
     it('renders a tab with text "Projects"', () => {
-      expect(wrapper.find(".projects").props().children).toBe("Projects")
+      expect(wrapper.find(".projects").props().children).toBe("PROJECTS")
     })
     it('navigates the user to the projects page/section', () => {
       expect(wrapper.find(".projects").props().to).toBe("/projects/#project-content")
@@ -46,7 +46,7 @@ describe('NavBar', () => {
 
   describe('Contact', () => {
     it('renders a tab with text "Contact"', () => {
-      expect(wrapper.find(".contact").props().children).toBe("Contact")
+      expect(wrapper.find(".contact").props().children).toBe("CONTACT")
     })
     it('navigates the user to the contact section', () => {
       expect(wrapper.find(".contact").props().to).toBe('/#contact')

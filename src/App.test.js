@@ -18,12 +18,14 @@ describe('App', () => {
 
   let wrapper
   let pathMap = {};
-
+  let routeHome
+  let routeProjects
+  
   beforeEach(() => {
-    wrapper = shallow(<App/>);
+  wrapper = shallow(<App/>);
     pathMap = wrapper.find(Route).reduce((pathMap, route) => {
         const routeProps = route.props();
-        pathMap[routeProps.path] = routeProps.component;
+        pathMap[routeProps.path] = routeProps.render;
         return pathMap;
       }, {});
   })
@@ -40,11 +42,21 @@ describe('App', () => {
     expect(wrapper.containsMatchingElement(<Footer/>)).toEqual(true);
   });
 
-  it('should show Home component for "/" route ', () => {
-    expect(pathMap['/']).toBe(Home);
+  describe('routeHome', () => {
+    it('routeHome component renders Home component', () => {
+      expect(wrapper.instance().routeHome().type).toEqual(Home)
+    })
+    it('Route renders the routeHome function', () => {
+      expect(pathMap['/']).toBe[Function, routeHome ];
+    })
   })
 
-  it('should show Projects component for "/projects" route ', () => {
-    expect(pathMap['/projects']).toBe(Projects);
+  describe('routeHome', () => {
+    it('routeHome component renders Home component', () => {
+      expect(wrapper.instance().routeProjects().type).toEqual(Projects)
+    })
+    it('should show Projects component for "/projects" route ', () => {
+      expect(pathMap['/projects']).toBe[Function, routeProjects]
+    })
   })
 });

@@ -1,16 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import './index.css';
 import App from './App';
+import PageNotFound from './Pages/404'
 import * as serviceWorker from './serviceWorker';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
-ReactDOM.render((
+const Main = () => (
   <BrowserRouter>
-    <App />
+    <Switch>
+      <Route path="/404" exact render={() => <div><PageNotFound /></div>} />
+      <Route path="/" component={App} />
+    </Switch>
   </BrowserRouter>
-), document.getElementById('root'))
+)
 
-ReactDOM.render(<App />, document.getElementById('root'));
-serviceWorker.unregister();
+const rootElement = document.getElementById("root");
+ReactDOM.render(
+  <React.StrictMode>
+    <Main />
+  </React.StrictMode>,
+  rootElement
+);

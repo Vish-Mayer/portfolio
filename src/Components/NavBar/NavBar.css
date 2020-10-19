@@ -4,6 +4,7 @@
 
 .home1{
   color: rgba(190, 16, 16, 0.726);
+  
 }
 
 .home1:hover{
@@ -12,4 +13,8 @@
 
 .nav-item{
   z-index: 0;
+}
+
+.nav-link{
+  
 }

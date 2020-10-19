@@ -1,4 +1,4 @@
-describe('Features', () => {
+describe('Routes', () => {
   
   const redirectFromHome = (to) => {
     cy.visit('http://localhost:3000/')
@@ -42,5 +42,10 @@ describe('Features', () => {
   it('it redirects the user from the projects page to the contact section', () => {
     redirectFromProjects('.contact')
     cy.url().should('eq', 'http://localhost:3000/#contact')
+  })
+
+  it('it directs the user to a 404 page if an unspecified path is entered', () => {
+    cy.visit('http://localhost:3000/unspecified-path')
+    cy.url().should('eq', 'http://localhost:3000/404')
   })
 })
