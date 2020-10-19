@@ -52,6 +52,7 @@ describe('Contact Form', () => {
     cy.get('#inputEmail').type('test@testingcypress.com')
     cy.get('#FormTextarea').type('This is Mike, Im alive and I need a favour.')
     cy.get('#send').click() 
+    cy.contains('Thanks for your message').should('be.visible') 
     cy.get('#inputName').should('have.value', '');
     cy.get('#inputEmail').should('have.value', '');
     cy.get('#FormTextarea').should('have.value', '');

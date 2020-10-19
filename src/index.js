@@ -4,7 +4,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import './index.css';
 import App from './App';
 import PageNotFound from './Pages/404'
-import * as serviceWorker from './serviceWorker';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 const Main = () => (

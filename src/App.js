@@ -5,7 +5,6 @@ import Projects from './Pages/Projects/Projects';
 import NavBar from './Components/NavBar/NavBar'
 import Footer from './Components/Footer/Footer'
 import SubFooter from './Components/Footer/SubFooter/SubFooter'
-import PageNotFound from './Pages/404'
 import './App.css';
 import { Switch, Route, Redirect } from 'react-router-dom';
 class App extends Component {

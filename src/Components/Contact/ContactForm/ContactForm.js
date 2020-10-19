@@ -18,7 +18,9 @@ class ContactForm extends Component {
       nameError: '',
       emailError: '',
       messageError: '',
+      messageConfirm: 'Have a question or want to work together?',
     }
+    this.timerId = null;
     this.handleInput1 = this.handleInput1.bind(this);
     this.handleInput2 = this.handleInput2.bind(this);
     this.handleInput3 = this.handleInput3.bind(this);
@@ -103,12 +105,24 @@ class ContactForm extends Component {
       });
   }
 
+  confirmEmailMessage(){
+    this.setState({messageConfirm: "Thanks for your message"})
+  }
+
+  resetMessage() {
+    this.timerId = setTimeout(() => {
+      this.setState({ messageConfirm: "Have a question or want to work together?" });
+       this.timerId = null;
+    }, 4000);
+  }
+ 
   submitForm(e) {
     e.preventDefault();
     const isValid = this.validateForm();
     if (isValid) {
-      this.sendEmail(e)
-      window.alert('Your message has been sent');
+      // this.sendEmail(e)
+      this.confirmEmailMessage()
+      this.resetMessage()
       e.target.reset()
       this.resetForm()
     }
@@ -119,7 +133,8 @@ class ContactForm extends Component {
       <div className="container">
         <div className="contact-form container-fluid d-flex justify-content-center bd-highlight" id="contact-form">
           <form onSubmit={this.submitForm} data-testid="form">
-            <h5 className="contact-text">Have a question or want to work together?</h5>
+            <h5 className="contact-text">{this.state.messageConfirm}</h5>
+            
 
             <div className="form-group">
               <input

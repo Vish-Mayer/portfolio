@@ -10,24 +10,14 @@ import Projects from './Pages/Projects/Projects';
 import SubFooter from './Components/Footer/SubFooter/SubFooter'
 import Footer from './Components/Footer/Footer'
 
-import { Route } from 'react-router-dom';
-
 configure({ adapter: new Adapter() });
 
 describe('App', () => {
 
-  let wrapper
-  let pathMap = {};
-  let routeHome
-  let routeProjects
+  let wrapper;
   
   beforeEach(() => {
-  wrapper = shallow(<App/>);
-    pathMap = wrapper.find(Route).reduce((pathMap, route) => {
-        const routeProps = route.props();
-        pathMap[routeProps.path] = routeProps.render;
-        return pathMap;
-      }, {});
+  wrapper = shallow(<App />);
   })
 
   it('displays the NavBar', () => {
@@ -42,21 +32,11 @@ describe('App', () => {
     expect(wrapper.containsMatchingElement(<Footer/>)).toEqual(true);
   });
 
-  describe('routeHome', () => {
-    it('routeHome component renders Home component', () => {
-      expect(wrapper.instance().routeHome().type).toEqual(Home)
-    })
-    it('Route renders the routeHome function', () => {
-      expect(pathMap['/']).toBe[Function, routeHome ];
-    })
+  it('routeHome component renders Home component', () => {
+    expect(wrapper.instance().routeHome().type).toEqual(Home)
   })
 
-  describe('routeHome', () => {
-    it('routeHome component renders Home component', () => {
-      expect(wrapper.instance().routeProjects().type).toEqual(Projects)
-    })
-    it('should show Projects component for "/projects" route ', () => {
-      expect(pathMap['/projects']).toBe[Function, routeProjects]
-    })
+  it('routeHome component renders Projects component', () => {
+    expect(wrapper.instance().routeProjects().type).toEqual(Projects)
   })
 });

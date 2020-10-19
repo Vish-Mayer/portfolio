@@ -8,11 +8,11 @@ function ModalFooter({onClose, projectLink}) {
   return(
     <div className="modal-footer container-fluid d-flex">
        <a href={projectLink} className="ext-link btn p-0">
-        <img src={icon2} /><h6>View in github</h6>
+        <img src={icon2} alt="View in Github" /><h6>View in github</h6>
       </a>
 
       <button className="close-modal btn p-0" onClick={onClose}>
-        <img src={icon}/>
+        <img src={icon} alt="back to projects"/>
       </button>
     </div>
   )
