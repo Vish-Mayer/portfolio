@@ -9,7 +9,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 const Main = () => (
   <BrowserRouter>
     <Switch>
-      <Route path="/404" exact render={() => <div><PageNotFound /></div>} />
+      <Route path="/404-page-not-found" exact render={() => <div><PageNotFound /></div>} />
       <Route path="/" component={App} />
     </Switch>
   </BrowserRouter>

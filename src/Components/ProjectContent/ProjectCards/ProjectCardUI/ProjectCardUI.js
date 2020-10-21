@@ -30,23 +30,22 @@ const ProjectCardUI = (props)=>{
   return(
     
     <div className="card text-center container-fluid p-0 d-flex">
+      <button className="project-card btn p-0" onClick={openModal}>
       <div className="overflow">
-      <div className="img-wrap">
-        <div className="overlay">
-          <div className="image__overlay">
-            <button className ="btn btn-outline-light" onClick ={openModal}>Learn more</button>
+        <div className="img-wrap">
+          <div className="overlay">
+            <div className="image__overlay">
+              <h4 className="card-title">{props.cardName}</h4>
+              <h6 className="card-text">
+              {displayPreview(props.cardDescription)}
+              <a className="open-modal-secondary" onClick={openModal}>more</a>
+              </h6>
+           </div>
           </div>
-        </div>
           <img src={props.imgsrc} alt="Image1" className="card-img-top"/>
         </div>
       </div>
-      <div className="card-body text-dark">
-        <h4 className="card-title">{props.cardName}</h4>
-        <p className="card-text text-secondary">
-          {displayPreview(props.cardDescription)}
-          <a className="open-modal" onClick={openModal}>more</a>
-        </p>
-      </div>
+      </button>
       <div className ="card-modal-props">
       <Modal
         open={isOpen} 

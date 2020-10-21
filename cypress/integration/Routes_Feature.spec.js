@@ -7,7 +7,7 @@ describe('Routes', () => {
   }
 
   const redirectFromProjects = (to) => {
-    cy.visit('http://localhost:3000/projects/#project-content')
+    cy.visit('http://localhost:3000/projects/#project-list')
     cy.get(to)
     .click()
   }
@@ -26,7 +26,7 @@ describe('Routes', () => {
     cy.visit('http://localhost:3000')
     cy.get('.projects')
     .click()
-    cy.url().should('eq', 'http://localhost:3000/projects/#project-content')
+    cy.url().should('eq', 'http://localhost:3000/projects/#project-list')
   })
 
   it('it redirects the user from the projects page to the home page', () => {
@@ -46,6 +46,6 @@ describe('Routes', () => {
 
   it('it directs the user to a 404 page if an unspecified path is entered', () => {
     cy.visit('http://localhost:3000/unspecified-path')
-    cy.url().should('eq', 'http://localhost:3000/404')
+    cy.url().should('eq', 'http://localhost:3000/404-page-not-found')
   })
 })

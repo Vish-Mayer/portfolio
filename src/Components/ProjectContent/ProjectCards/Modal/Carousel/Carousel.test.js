@@ -3,10 +3,8 @@ import Carousel from './Carousel'
 
 import { configure, shallow,} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { jsxEmptyExpression } from '@babel/types';
 
 configure({ adapter: new Adapter() });
-
 
 describe('Carousel', () => {
 
@@ -23,11 +21,21 @@ describe('Carousel', () => {
     wrapper = shallow(<Carousel {...props}/>);
   })
 
-  it('renders a button that goes left', () => {
-    expect(wrapper.find('#goLeft').type()).toBe('button')
+   it('renders the project images', () => {
+    expect(wrapper.find('.slider').at(0).props().children.type).toBe('img')
+    expect(wrapper.find('.slider').at(0).props().children.props.src).toBe("testimage1.jpg")
+    expect(wrapper.find('.slider').at(1).props().children.props.src).toBe("testimage2.jpg")
+    expect(wrapper.find('.slider').at(2).props().children.props.src).toBe("testimage3.jpg")
+    expect(wrapper.find('.slider').at(3).props().children.props.src).toBe("testimage4.jpg")
   });
 
   it('renders a button that goes left', () => {
+    expect(wrapper.find('#goLeft').type()).toBe('button')
+    expect(wrapper.find('#goLeft').props().children.props.alt).toBe("left")
+  });
+ 
+  it('renders a button that goes left', () => {
     expect(wrapper.find('#goRight').type()).toBe('button')
+    expect(wrapper.find('#goRight').props().children.props.alt).toBe("right")
   });
 });

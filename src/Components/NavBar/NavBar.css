@@ -1,20 +1,41 @@
 .navbar1{
-  background-color: rgba(0, 0, 0, 0.589);
+  background: rgb(42, 40, 49);
 }
 
-.home1{
+.nav-home{
   color: rgba(190, 16, 16, 0.726);
-  
 }
 
-.home1:hover{
-  color: rgb(190, 190, 190);
+.nav-about{
+  color: white;
 }
+
+.nav-projects{
+  color: white;
+}
+
+.nav-contact{
+  color: white;
+}
+
+.nav-home:hover{
+  color: white;
+}
+
+.nav-about:hover{
+  color: rgb(4, 80, 105);
+}
+
+.nav-projects:hover{
+  color: rgb(4, 80, 105);
+}
+
+.nav-contact:hover{
+  color: rgb(4, 80, 105);
+}
+
 
 .nav-item{
   z-index: 0;
 }
 
-.nav-link{
-  
-}

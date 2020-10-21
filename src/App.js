@@ -29,7 +29,7 @@ class App extends Component {
           <Switch>
             <Route path="/" exact render={this.routeHome} />
             <Route exact path="/projects" render={this.routeProjects} /> 
-            <Redirect to="/404" /> 
+            <Redirect to="/404-page-not-found" /> 
           </Switch>
           <SubFooter/>
           <Footer />

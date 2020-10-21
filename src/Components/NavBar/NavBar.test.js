@@ -40,7 +40,7 @@ describe('NavBar', () => {
       expect(wrapper.find(".projects").props().children).toBe("PROJECTS")
     })
     it('navigates the user to the projects page/section', () => {
-      expect(wrapper.find(".projects").props().to).toBe("/projects/#project-content")
+      expect(wrapper.find(".projects").props().to).toBe("/projects/#project-list")
     })
   })
 

@@ -16,38 +16,42 @@ function NavBar() {
   window.addEventListener('scroll', changeBackground)
 
   return(
-    <ul className={ navbar ? "nav navbar1 font-weight-bold sticky-top nav-justified": "nav bg-transparent font-weight-bold sticky-top nav-justified"}>
+  
+    <ul className="nav navbar1 font-weight-bold sticky-top nav-justified">
         <li className="nav-item">
           <Link
-            className={navbar ? "nav-link home home1" : "nav-link text-secondary home home2"}
+            className={navbar ? "nav-link home nav-home" : "nav-link text-secondary home home2"}
             smooth to="/#home">
               HOME
           </Link>
         </li>
         <li className="nav-item">
           <Link
-            className={navbar ? "nav-link text-white about" : "nav-link text-secondary about"}
-            smooth to="/#about">
+            className={navbar ? "nav-link nav-about" : "nav-link text-secondary about"}
+            smooth to="/#about"
+             activeStyle={{ color: 'red' }}>
+              
               ABOUT
           </Link>
         </li>
 
         <li className="nav-item">
           <Link
-            className={navbar ? "nav-link text-white projects" : "nav-link text-secondary projects"}
-            smooth to="/projects/#project-content">
+            className={navbar ? "nav-link nav-projects" : "nav-link text-secondary projects"}
+            smooth to="/projects/#project-list">
               PROJECTS
           </Link>
         </li>
 
         <li className="nav-item">
           <Link
-            className={navbar ? "nav-link text-white contact" : "nav-link text-secondary contact"}
+            className={navbar ? "nav-link nav-contact" : "nav-link text-secondary contact"}
             smooth to="/#contact">
               CONTACT
           </Link>
         </li>
       </ul>
+    
   )
 }
 

@@ -120,7 +120,7 @@ class ContactForm extends Component {
     e.preventDefault();
     const isValid = this.validateForm();
     if (isValid) {
-      // this.sendEmail(e)
+      this.sendEmail(e)
       this.confirmEmailMessage()
       this.resetMessage()
       e.target.reset()

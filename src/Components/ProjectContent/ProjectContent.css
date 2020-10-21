@@ -1,10 +1,15 @@
 .project-content{
   padding-top: 3em;
   width: 100%;
-  background: url("../../Assets/background4.jpg");
+  /* background: url("../../Assets/background4.jpg"); */
+  background: rgb(245, 245, 245);
   position: relative;
   overflow: hidden;
   z-index: 0;
+}
+
+.project-h1-header{
+  padding-top: 1em;
 }
 
 .project-content:after {

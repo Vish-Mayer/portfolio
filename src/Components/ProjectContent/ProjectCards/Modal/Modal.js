@@ -16,17 +16,13 @@ export default function Modal({open, onClose, image, image2, image3, image4, tit
         <Carousel img1={image} img2={image2} img3={image3} img4={image4}/>
       </div> 
 
-      <div><button onClick={onClose} className="btn-outline-info close-modal-main">Back to projects</button></div>
-
       <div className="modal-info">
-
-      <h3 className="card-title modal-title">{title}</h3>
-
-      <h6 className="modal-tech-stack">{techStack}</h6>
-
-      <div className="modal-description">{description}</div> 
+        <h3 className="card-title modal-title">{title}</h3>
+        <h6 className="modal-tech-stack">{techStack}</h6>
+        <div className="modal-description">{description}
+        </div> 
       </div>
-
+ 
       <div className="modalfooter-display">
         <ModalFooter onClose={onClose} projectLink={projectLink}/>
       </div>

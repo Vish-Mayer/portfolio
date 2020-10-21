@@ -10,10 +10,11 @@
 }
 
 h1 {
-  text-decoration:  rgb(4, 80, 105) solid overline;
+  font-weight: 900;
   text-decoration-skip: objects;
   text-align: center;
-  padding-bottom: 2rem;
+  padding-bottom: 0.5em;
+  text-decoration: underline;
 }
 
 .App-logo {

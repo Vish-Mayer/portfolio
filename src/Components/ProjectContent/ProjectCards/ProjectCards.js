@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import ProjectCardUI from './ProjectCardUI/ProjectCardUI'
 
-//project1 media
+//project1 media 
 import img1 from '../../../Assets/testimage.png'
 import img2 from '../../../Assets/background1.jpg'
 import img3 from '../../../Assets/testimage.png'
@@ -30,11 +30,10 @@ class ProjectCards extends Component {
  
   render(){
     return(
-      <div className="justify-content-center d-flex project-cards">
-        <div className="row">
-          <div className="col-md-1">
-          </div>
-          <div className="col-md-5 single-card">
+      <div className=" d-flex project-cards">
+        <div className="row justify-content-center">
+    
+          <div className="col-md-5 p-0"> 
           < ProjectCardUI
               id="project1"
               imgsrc={img1} 
@@ -46,7 +45,8 @@ class ProjectCards extends Component {
               techStack="Ruby, React, Javascript, Others"
               projectLink="testlink.com"/>
           </div>
-          <div className="col-md-5">
+          
+          <div className="col-md-5 p-0">
             <ProjectCardUI
               id="project2"
               imgsrc={img5} 
@@ -56,12 +56,8 @@ class ProjectCards extends Component {
               cardName="This is a Dynamic Card" 
               cardDescription= "This is a dynamic card description"/>
           </div>
-          <div className="col-md-1">
-          </div>
-
-          <div className="col-md-1">
-          </div>
-          <div className="col-md-5">
+         
+          <div className="col-md-5 p-0">
           < ProjectCardUI
               id="project3"
               imgsrc={img9}
@@ -71,7 +67,8 @@ class ProjectCards extends Component {
               cardName="This is a Dynamic Card" 
               cardDescription= "This is a dynamic card description"/>
           </div>
-          <div className="col-md-5">
+
+          <div className="col-md-5 p-0">
             <ProjectCardUI
                id="project4"
               imgsrc={img13} 
@@ -81,9 +78,9 @@ class ProjectCards extends Component {
               cardName="This is a Dynamic Card" 
               cardDescription= "This is a dynamic card description"/>
           </div>
-          <div className="col-md-1">
-          </div>
+        
         </div>
+        
       </div>
     );
   }

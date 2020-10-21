@@ -7,7 +7,7 @@ import icon2 from '../../../../../Assets/github.png'
 function ModalFooter({onClose, projectLink}) {
   return(
     <div className="modal-footer container-fluid d-flex">
-       <a href={projectLink} className="ext-link btn p-0">
+       <a href={projectLink} target="_blank" className="ext-link btn p-0">
         <img src={icon2} alt="View in Github" /><h6>View in github</h6>
       </a>
 
