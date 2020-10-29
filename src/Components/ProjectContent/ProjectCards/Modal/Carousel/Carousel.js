@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './Carousel.scss'
 import icon from '../../../../../Assets/whitearrowXS.png'
  
-export default function Carousel({img1, img2, img3, img4}) {
+export default function Carousel({img1, img2, img3}) {
 
-  let sliderArray = [img2, img1, img3, img4]
+  let sliderArray = [img2, img3, img1]
 
   const [x, setX] = useState(0)
 

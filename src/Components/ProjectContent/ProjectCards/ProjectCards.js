@@ -5,25 +5,21 @@ import ProjectCardUI from './ProjectCardUI/ProjectCardUI'
 import img1 from '../../../Assets/Projects/1-1.png'
 import img2 from '../../../Assets/Projects/1-2.png'
 import img3 from '../../../Assets/Projects/1-3.png'
-import img4 from '../../../Assets/background1.jpg'
 
 //project2 media
-import img5 from '../../../Assets/Projects/2-1.png'
-import img6 from '../../../Assets/Projects/2-2.png'
-import img7 from '../../../Assets/Projects/2-3.png'
-import img8 from '../../../Assets/background1.jpg'
+import img4 from '../../../Assets/Projects/2-1.png'
+import img5 from '../../../Assets/Projects/2-2.png'
+import img6 from '../../../Assets/Projects/2-3.png'
 
 //project3 media 
-import img9 from '../../../Assets/Projects/3-1.png'
-import img10 from '../../../Assets/Projects/3-2.png'
-import img11 from '../../../Assets/Projects/3-3.png'
-import img12 from '../../../Assets/background1.jpg'
+import img7 from '../../../Assets/Projects/3-1.png'
+import img8 from '../../../Assets/Projects/3-2.png'
+import img9 from '../../../Assets/Projects/3-3.png'
 
 //project4 media 
-import img13 from '../../../Assets/Projects/4-1.png'
-import img14 from '../../../Assets/Projects/4-2.png'
-import img15 from '../../../Assets/Projects/4-3.png'
-import img16 from '../../../Assets/background1.jpg'
+import img10 from '../../../Assets/Projects/4-1.png'
+import img11 from '../../../Assets/Projects/4-2.png'
+import img12 from '../../../Assets/Projects/4-3.png'
 
 import './ProjectCards.css'
 class ProjectCards extends Component {
@@ -39,7 +35,6 @@ class ProjectCards extends Component {
               imgsrc={img1} 
               imgsrc2={img2}
               imgsrc3={img3}
-              imgsrc4={img4}
               cardName="Music Visualiser" 
               cardDescription="A single page web app music visualiser that dynamically creates animation based on data returned by the Spotify WEB API."
               techStack="React.js, Node.js, Cypress"
@@ -49,10 +44,9 @@ class ProjectCards extends Component {
           <div className="col-md-5 p-0">
             <ProjectCardUI
               id="project2"
-              imgsrc={img5} 
-              imgsrc2={img6}
-              imgsrc3={img7}
-              imgsrc4={img8}
+              imgsrc={img4} 
+              imgsrc2={img5}
+              imgsrc3={img6}
               cardName="Acebook" 
               cardDescription= "A social media application that allows you to add friends, share your thoughts, browze through other users profiles, and comment on other peoples posts."
               techStack="Ruby on Rails, PostgreSQL, Rspec"
@@ -62,10 +56,9 @@ class ProjectCards extends Component {
           <div className="col-md-5 p-0">
           < ProjectCardUI
               id="project3"
-              imgsrc={img9}
-              imgsrc2={img10}
-              imgsrc3={img11}
-              imgsrc4={img12} 
+              imgsrc={img7}
+              imgsrc2={img8}
+              imgsrc3={img9}
               cardName="React Chat Application" 
               cardDescription= "React application that implements socket.io to allow a user to create a room and talk to friends."
               techStack="React.js, Node.js"
@@ -75,18 +68,15 @@ class ProjectCards extends Component {
           <div className="col-md-5 p-0">
             <ProjectCardUI
                id="project4"
-              imgsrc={img13} 
-              imgsrc2={img14}
-              imgsrc3={img15}
-              imgsrc4={img16}
+              imgsrc={img10} 
+              imgsrc2={img11}
+              imgsrc3={img12}
               cardName="Makersbnb"
               cardDescription= "An online marketplace that connects people who want to rent out their homes with people who are looking for accommodations."
               techStack="Ruby, Sinatra, JavaScript, jQuery, PostgreSQL, Rspec, Capybara"
               projectLink="https://github.com/asiaellis5/Makers-Bnb"/>
           </div>
-        
         </div>
-        
       </div>
     );
   }

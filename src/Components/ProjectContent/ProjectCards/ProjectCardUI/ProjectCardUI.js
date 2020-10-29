@@ -5,12 +5,6 @@ import Modal from '../Modal/Modal'
 const ProjectCardUI = (props)=>{
   const[isOpen, setIsOpen] = useState(false)
 
-  // if(isOpen) {
-  //   document.body.style.overflow = "hidden"
-  // } else {
-  //   document.body.style.overflow = ""
-  // }
-
   function openModal() {
     setIsOpen(true)
   }
