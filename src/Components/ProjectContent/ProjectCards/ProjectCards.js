@@ -2,27 +2,27 @@ import React, {Component} from 'react'
 import ProjectCardUI from './ProjectCardUI/ProjectCardUI'
 
 //project1 media 
-import img1 from '../../../Assets/testimage.png'
-import img2 from '../../../Assets/background1.jpg'
-import img3 from '../../../Assets/testimage.png'
+import img1 from '../../../Assets/Projects/1-1.png'
+import img2 from '../../../Assets/Projects/1-2.png'
+import img3 from '../../../Assets/Projects/1-3.png'
 import img4 from '../../../Assets/background1.jpg'
 
 //project2 media
-import img5 from '../../../Assets/testimage.png'
-import img6 from '../../../Assets/background1.jpg'
-import img7 from '../../../Assets/testimage.png'
+import img5 from '../../../Assets/Projects/2-1.png'
+import img6 from '../../../Assets/Projects/2-2.png'
+import img7 from '../../../Assets/Projects/2-3.png'
 import img8 from '../../../Assets/background1.jpg'
 
 //project3 media 
-import img9 from '../../../Assets/testimage.png'
-import img10 from '../../../Assets/background1.jpg'
-import img11 from '../../../Assets/testimage.png'
+import img9 from '../../../Assets/Projects/3-1.png'
+import img10 from '../../../Assets/Projects/3-2.png'
+import img11 from '../../../Assets/Projects/3-3.png'
 import img12 from '../../../Assets/background1.jpg'
 
 //project4 media 
-import img13 from '../../../Assets/testimage.png'
-import img14 from '../../../Assets/background1.jpg'
-import img15 from '../../../Assets/testimage.png'
+import img13 from '../../../Assets/Projects/4-1.png'
+import img14 from '../../../Assets/Projects/4-2.png'
+import img15 from '../../../Assets/Projects/4-3.png'
 import img16 from '../../../Assets/background1.jpg'
 
 import './ProjectCards.css'
@@ -40,10 +40,10 @@ class ProjectCards extends Component {
               imgsrc2={img2}
               imgsrc3={img3}
               imgsrc4={img4}
-              cardName="This is a Dynamic Card" 
-              cardDescription="This is a dynamic card description This is a dynamic card description This is a dynamic card description This is a dynamic card description This is a dynamic card description This is a dynamic card description This is a dynamic card description This is a dynamic card description This is a dynamic card description This is a dynamic card description This is a dynamic card description This is a dynamic card description This is a dynamic card description This is a dynamic card description"
-              techStack="Ruby, React, Javascript, Others"
-              projectLink="testlink.com"/>
+              cardName="Music Visualiser" 
+              cardDescription="A single page web app music visualiser that dynamically creates animation based on data returned by the Spotify WEB API."
+              techStack="React.js, Node.js, Cypress"
+              projectLink="https://github.com/Walker-TW/Front-End-Vishual"/>
           </div>
           
           <div className="col-md-5 p-0">
@@ -53,8 +53,10 @@ class ProjectCards extends Component {
               imgsrc2={img6}
               imgsrc3={img7}
               imgsrc4={img8}
-              cardName="This is a Dynamic Card" 
-              cardDescription= "This is a dynamic card description"/>
+              cardName="Acebook" 
+              cardDescription= "A social media application that allows you to add friends, share your thoughts, browze through other users profiles, and comment on other peoples posts."
+              techStack="Ruby on Rails, PostgreSQL, Rspec"
+              projectLink="https://github.com/basselalsayed/acebook-derailed"/>
           </div>
          
           <div className="col-md-5 p-0">
@@ -64,8 +66,10 @@ class ProjectCards extends Component {
               imgsrc2={img10}
               imgsrc3={img11}
               imgsrc4={img12} 
-              cardName="This is a Dynamic Card" 
-              cardDescription= "This is a dynamic card description"/>
+              cardName="React Chat Application" 
+              cardDescription= "React application that implements socket.io to allow a user to create a room and talk to friends."
+              techStack="React.js, Node.js"
+              projectLink="https://github.com/Vish-Mayer/Chat"/>
           </div>
 
           <div className="col-md-5 p-0">
@@ -75,8 +79,10 @@ class ProjectCards extends Component {
               imgsrc2={img14}
               imgsrc3={img15}
               imgsrc4={img16}
-              cardName="This is a Dynamic Card" 
-              cardDescription= "This is a dynamic card description"/>
+              cardName="Makersbnb"
+              cardDescription= "An online marketplace that connects people who want to rent out their homes with people who are looking for accommodations."
+              techStack="Ruby, Sinatra, JavaScript, jQuery, PostgreSQL, Rspec, Capybara"
+              projectLink="https://github.com/asiaellis5/Makers-Bnb"/>
           </div>
         
         </div>

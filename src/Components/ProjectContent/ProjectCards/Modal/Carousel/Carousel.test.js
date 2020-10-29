@@ -23,8 +23,8 @@ describe('Carousel', () => {
 
    it('renders the project images', () => {
     expect(wrapper.find('.slider').at(0).props().children.type).toBe('img')
-    expect(wrapper.find('.slider').at(0).props().children.props.src).toBe("testimage1.jpg")
-    expect(wrapper.find('.slider').at(1).props().children.props.src).toBe("testimage2.jpg")
+    expect(wrapper.find('.slider').at(0).props().children.props.src).toBe("testimage2.jpg")
+    expect(wrapper.find('.slider').at(1).props().children.props.src).toBe("testimage1.jpg")
     expect(wrapper.find('.slider').at(2).props().children.props.src).toBe("testimage3.jpg")
     expect(wrapper.find('.slider').at(3).props().children.props.src).toBe("testimage4.jpg")
   });

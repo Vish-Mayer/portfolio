@@ -27,12 +27,11 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className='footer-end d-flex justify-content-center'>
+      <div className='footer-end d-flex'>
       <div className="created-by">Vishal Mayer Kakkad </div>
       <div className="created-date">&nbsp;@2020</div>
       </div>
     </div>
-    
   )
 }
 export default Footer

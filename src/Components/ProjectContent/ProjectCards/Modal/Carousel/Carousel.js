@@ -4,7 +4,7 @@ import icon from '../../../../../Assets/whitearrowXS.png'
  
 export default function Carousel({img1, img2, img3, img4}) {
 
-  let sliderArray = [img1, img2, img3, img4]
+  let sliderArray = [img2, img1, img3, img4]
 
   const [x, setX] = useState(0)
 
@@ -28,11 +28,11 @@ export default function Carousel({img1, img2, img3, img4}) {
           )
         })
       }
-      <button id="goLeft" onClick={goLeft}>
-      <img src={icon} alt="left"/>
+      <button className='btn p-0' id="goLeft" onClick={goLeft}>
+      <img className="image-btn" src={icon} alt="left"/>
       </button>
-      <button id="goRight" onClick={goRight}>
-      <img src={icon} alt="right" id="right-icon"/>
+      <button className='btn p-0' id="goRight" onClick={goRight}>
+      <img className="image-btn" src={icon} alt="right" id="right-icon"/>
       </button>
     </div>
   );

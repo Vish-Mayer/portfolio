@@ -28,7 +28,7 @@ describe('Header', () => {
     })
     it('routes the user to the about section', () => {
       const button = (wrapper.find('.dwn-btn').props())
-      expect((button).to).toEqual("/#about")
+      expect((button).to).toEqual("about")
     })
   })
 });

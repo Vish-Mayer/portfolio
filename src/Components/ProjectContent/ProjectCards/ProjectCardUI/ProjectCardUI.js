@@ -5,11 +5,11 @@ import Modal from '../Modal/Modal'
 const ProjectCardUI = (props)=>{
   const[isOpen, setIsOpen] = useState(false)
 
-  if(isOpen) {
-    document.body.style.overflow = "hidden"
-  } else {
-    document.body.style.overflow = ""
-  }
+  // if(isOpen) {
+  //   document.body.style.overflow = "hidden"
+  // } else {
+  //   document.body.style.overflow = ""
+  // }
 
   function openModal() {
     setIsOpen(true)
@@ -29,7 +29,7 @@ const ProjectCardUI = (props)=>{
 
   return(
     
-    <div className="card text-center container-fluid p-0 d-flex">
+    <div className="card text-center container-fluid p-0">
       <button className="project-card btn p-0" onClick={openModal}>
       <div className="overflow">
         <div className="img-wrap">

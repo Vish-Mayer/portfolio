@@ -1,6 +1,6 @@
 import React from 'react'
 import About from './About'
-import profilepic from '../../Assets/testprofilepic.png'
+import profilepic from '../../Assets/profilepic.png'
 
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';

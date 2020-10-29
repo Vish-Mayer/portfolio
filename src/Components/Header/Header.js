@@ -1,6 +1,6 @@
 import React from 'react';
 import Typical from 'react-typical';
-import { HashLink as Link } from 'react-router-hash-link';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 import './Header.css'
 import icon from '../../Assets/dwn-arrowXS.png'
@@ -25,7 +25,8 @@ function Header() {
       </div>  
     </div>
       <div class="dwn-btn-container container-fluid d-flex justify-content-center">                  
-        <Link className="dwn-btn" smooth to="/#about">
+       
+        <Link className="dwn-btn" activeClass="active" to="about" spy={true} smooth={true} offset={50} duration={500}>
           <img src={icon} alt="down"/>
         </Link>
     </div>

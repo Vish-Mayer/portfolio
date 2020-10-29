@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css'
-import profilepic from '../../Assets/testprofilepic.png'
+import profilepic from '../../Assets/profilepic.png'
 
 function About() {
   return(
@@ -8,9 +8,7 @@ function About() {
       <h1>About</h1>
         <div className="about-grid container-fluid d-flex justify-content-center" id="about-grid">
           <div className="about-row row">
-            <div className="col-md-5">
-              <img src={profilepic} alt="profile-pic" className='img-fluid'/>
-            </div>
+          
             <div className="profile-body col-md-7">
              <p>This is a test profile, This is a test profile, This is a test profile, This is a test profile
              This is a test profile, This is a test profile, This is a test profile, This is a test profile
@@ -22,6 +20,9 @@ function About() {
              This is a test profile This is a test profile This is a test profile
              This is a test profile This is a test profile This is a test profile
              </p>
+            </div>
+             <div className="col-md-5">
+              <img src={profilepic} alt="profile-pic" className='profile-pic '/>
             </div>
           </div>
         </div>

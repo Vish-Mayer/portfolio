@@ -1,6 +1,6 @@
 #modal{
   padding-top:0em;
-  height:45em;
+  
   width:45em;
   max-height: 100%;
   position: fixed;
@@ -58,7 +58,6 @@
 }
 
 .modal-img{
-  height: 49vh;
   max-height: 100%;
   max-width: 100%;
   border-bottom: 3px solid rgb(4, 80, 105);
