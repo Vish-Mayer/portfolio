@@ -4,7 +4,6 @@ import ProjectContent from './ProjectContent'
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import ProjectCards from './ProjectCards/ProjectCards'
-import SubFooter from '../Footer/SubFooter/SubFooter'
 
 configure({ adapter: new Adapter() });
 

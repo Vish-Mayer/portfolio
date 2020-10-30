@@ -7,7 +7,6 @@ function ProjectContent() {
   return(
   <div className="project-content container-fluid p-0"id="project-list">
     <h1 className="project-h1-header">Projects</h1>
-    These are some things that Ive made.
     <ProjectCards/>
   </div>
   )

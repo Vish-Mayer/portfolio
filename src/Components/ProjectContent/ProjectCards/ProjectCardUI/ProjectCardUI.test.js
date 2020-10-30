@@ -16,7 +16,6 @@ describe('Projects', () => {
     imgsrc:"testimage.png",
     imgsrc2:"testimage2.png",
     imgsrc3:"testimage3.png",
-    imgsrc4:"testimage4.png",
   }
   
   beforeEach(() => {
@@ -62,7 +61,6 @@ describe('Projects', () => {
       expect(cardprops.props.image).toEqual('testimage.png')
       expect(cardprops.props.image2).toEqual('testimage2.png')
       expect(cardprops.props.image3).toEqual('testimage3.png')
-      expect(cardprops.props.image4).toEqual('testimage4.png')
     });
   })
 });

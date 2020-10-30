@@ -48,7 +48,6 @@ const ProjectCardUI = (props)=>{
         image={props.imgsrc}
         image2={props.imgsrc2}
         image3={props.imgsrc3}
-        image4={props.imgsrc4}
         description={props.cardDescription}
         techStack={props.techStack}
         projectLink={props.projectLink}>

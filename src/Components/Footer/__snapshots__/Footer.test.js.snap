@@ -6,41 +6,56 @@ Object {
     <div
       className="col-md-4 col-4"
     >
-      <button
-        className="media-btn"
+      <a
+        href="https://www.linkedin.com/in/vishal-mayer-kakkad-a04607189/"
+        target="_blank"
       >
-        <img
-          alt="media1"
-          className="media-img"
-          src="linkedinS.png"
-        />
-      </button>
+        <button
+          className="media-btn"
+        >
+          <img
+            alt="media1"
+            className="media-img"
+            src="linkedinS.png"
+          />
+        </button>
+      </a>
     </div>,
     <div
       className="col-md-4 col-4"
     >
-      <button
-        className="media-btn"
+      <a
+        href="https://github.com/Vish-Mayer/"
+        target="_blank"
       >
-        <img
-          alt="media2"
-          className="media-img"
-          src="github.png"
-        />
-      </button>
+        <button
+          className="media-btn"
+        >
+          <img
+            alt="media2"
+            className="media-img"
+            src="github.png"
+          />
+        </button>
+      </a>
     </div>,
     <div
       className="col-md-4 col-4"
     >
-      <button
-        className="media-btn"
+      <a
+        href="Vishal Kakkad CV 2020.pdf"
+        target="_blank"
       >
-        <img
-          alt="media3"
-          className="media-img"
-          src="cvlogo2.png"
-        />
-      </button>
+        <button
+          className="media-btn"
+        >
+          <img
+            alt="media3"
+            className="media-img"
+            src="cvlogo2.png"
+          />
+        </button>
+      </a>
     </div>,
   ],
   "className": "media-row row p-0",
