@@ -3,7 +3,7 @@ import Typical from 'react-typical';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 import './Header.css'
-import icon from '../../Assets/dwn-arrowXS.png'
+import icon from '../../Assets/Icons/dwn-arrowXS.png'
 
 function Header() {
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import './Footer.css'
 
-import media1 from '../../Assets/linkedinS.png'
-import media2 from '../../Assets/github.png'
-import media3 from '../../Assets/cvlogo2.png'
+import media1 from '../../Assets/Icons/linkedinS.png'
+import media2 from '../../Assets/Icons/github.png'
+import media3 from '../../Assets/Icons/cvlogo2.png'
 import Doc from '../../Assets/Documents/Vishal Kakkad CV 2020.pdf'
 
 function Footer() {

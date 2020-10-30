@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Carousel.scss'
-import icon from '../../../../../Assets/whitearrowXS.png'
+import icon from '../../../../../Assets/Icons/whitearrowXS.png'
  
 export default function Carousel({img1, img2, img3}) {
 

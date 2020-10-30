@@ -1,8 +1,8 @@
 import React from 'react';
-import './ModalFooter.css'
+import './ModalFooter.css';
 
-import icon from '../../../../../Assets/closeXS.png'
-import icon2 from '../../../../../Assets/github.png'
+import icon from '../../../../../Assets/Icons/closeXS.png';
+import icon2 from '../../../../../Assets/Icons/github.png';
 
 function ModalFooter({onClose, projectLink}) {
   return(

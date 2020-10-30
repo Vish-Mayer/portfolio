@@ -3,7 +3,7 @@ import { animateScroll as scroll,} from 'react-scroll'
 
 import './SubFooter.css'
 
-import icon from '../../../Assets/redarrow.png'
+import icon from '../../../Assets/Icons/redarrow.png'
 
 function SubFooter() {
 

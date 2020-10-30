@@ -4,7 +4,7 @@ import Header from './Header';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import icon from '../../Assets/dwn-arrowXS.png'
+import icon from '../../Assets/Icons/dwn-arrowXS.png'
 
 configure({ adapter: new Adapter() });
 
