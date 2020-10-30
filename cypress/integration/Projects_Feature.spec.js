@@ -8,7 +8,7 @@ describe('Projects', () => {
   it('clicking on a card opens up the full project details', () => {
     cy.visit('http://localhost:3000/projects/#project-content')
     cy.get('.project-card').first().click()
-    cy.contains('This is a dynamic card description').should('be.visible') 
+    cy.contains('Music Visualiser').should('be.visible') 
   })
 
   it('has a button the close the pop up window', () => {
