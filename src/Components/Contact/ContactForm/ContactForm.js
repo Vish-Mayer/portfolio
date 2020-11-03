@@ -113,7 +113,7 @@ class ContactForm extends Component {
     this.timerId = setTimeout(() => {
       this.setState({ messageConfirm: "Have a question or want to work together?" });
        this.timerId = null;
-    }, 4000);
+    }, 10000);
   }
  
   submitForm(e) {
@@ -175,7 +175,7 @@ class ContactForm extends Component {
               ></textarea>
               <label className="form-error" id="message-error" for="FormTextarea">{this.state.messageError}</label>
             </div>
-            <button type="submit" className="btn btn-outline-light" id="send">Send</button>
+            <button type="submit" className="submit-form" id="send">Send</button>
           </form>
         </div>
         <div>

@@ -13,24 +13,30 @@ function Footer() {
         <div className="media-row row p-0">
 
           <div className="col-md-4 col-4">
-            <a href="https://www.linkedin.com/in/vishal-mayer-kakkad-a04607189/" target="_blank">
-              <button className="media-btn">
+            <a href="https://www.linkedin.com/in/vishal-mayer-kakkad-a04607189/" target="_blank" rel="noreferrer noopener">
+              <button 
+              className="media-btn" 
+              title="Linkedin">
                 <img className="media-img" src={media1} alt="media1"/>
               </button>
             </a>
           </div>
 
           <div className="col-md-4 col-4">
-          <a href="https://github.com/Vish-Mayer/" target="_blank">
-            <button className="media-btn">
+          <a href="https://github.com/Vish-Mayer/" target="_blank" rel="noreferrer noopener">
+            <button
+            className="media-btn" 
+            title="Github">
               <img className="media-img" src={media2} alt="media2"/>
             </button>
           </a> 
           </div>
 
           <div className="col-md-4 col-4">
-            <a href={Doc} target="_blank">
-              <button className="media-btn">
+            <a href={Doc} target="_blank" rel="noreferrer noopener">
+              <button 
+              className="media-btn" 
+              title="Download CV">
                 <img className="media-img" src={media3} alt="media3"/>
               </button>
             </a>

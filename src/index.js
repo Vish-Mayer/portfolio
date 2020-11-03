@@ -5,6 +5,8 @@ import './index.css';
 import App from './App';
 import PageNotFound from './Pages/404'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 
 const Main = () => (
   <BrowserRouter>

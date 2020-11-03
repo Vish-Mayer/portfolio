@@ -20,6 +20,6 @@ describe('Profile', () => {
   });
 
   it('displays a profile picture', () => {
-    expect(wrapper.find("img").prop("src")).toEqual(profilepic)
+    expect(wrapper.find("img").at(7).prop("src")).toEqual(profilepic)
   });
 });

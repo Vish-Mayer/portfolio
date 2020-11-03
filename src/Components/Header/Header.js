@@ -3,7 +3,6 @@ import Typical from 'react-typical';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 import './Header.css'
-import icon from '../../Assets/Icons/dwn-arrowXS.png'
 
 function Header() {
 
@@ -26,8 +25,8 @@ function Header() {
     </div>
       <div class="dwn-btn-container container-fluid d-flex justify-content-center">                  
        
-        <Link className="dwn-btn" activeClass="active" to="about" spy={true} smooth={true} offset={50} duration={500}>
-          <img src={icon} alt="down"/>
+        <Link className="dwn-btn position-sticky d-flex justify-content-center" activeClass="active" to="about" spy={true} smooth={true} offset={50} duration={500}>
+        <i class="btn fas fa-chevron-down fa-2x"></i>
         </Link>
     </div>
   </div>

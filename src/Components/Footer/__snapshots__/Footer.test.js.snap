@@ -8,10 +8,12 @@ Object {
     >
       <a
         href="https://www.linkedin.com/in/vishal-mayer-kakkad-a04607189/"
+        rel="noreferrer noopener"
         target="_blank"
       >
         <button
           className="media-btn"
+          title="Linkedin"
         >
           <img
             alt="media1"
@@ -26,10 +28,12 @@ Object {
     >
       <a
         href="https://github.com/Vish-Mayer/"
+        rel="noreferrer noopener"
         target="_blank"
       >
         <button
           className="media-btn"
+          title="Github"
         >
           <img
             alt="media2"
@@ -44,10 +48,12 @@ Object {
     >
       <a
         href="Vishal Kakkad CV 2020.pdf"
+        rel="noreferrer noopener"
         target="_blank"
       >
         <button
           className="media-btn"
+          title="Download CV"
         >
           <img
             alt="media3"

@@ -1,9 +1,13 @@
 .navbar1{
   background: rgb(42, 40, 49);
+  border-bottom: solid 4px  rgb(4, 80, 105);
 }
 
 .nav-home{
   color: rgba(190, 16, 16, 0.726);
+}
+.navbar-toggler{
+  float: right;
 }
 
 .nav-about{

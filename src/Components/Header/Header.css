@@ -17,17 +17,9 @@
   padding-left: 5em;
 }
 
-.dwn-btn{
+.fa-chevron-down{
   position: absolute;
-  bottom: -25px;
-}
-
-.dwn-btn{
-  transform: scale(1);
-}
-
-.dwn-btn:hover{
-  transform: scale(1.05);
+  bottom: 0em;
 }
 
 @media only screen and (max-width: 650px) {
