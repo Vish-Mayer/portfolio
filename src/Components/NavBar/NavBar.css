@@ -4,10 +4,15 @@
 }
 
 .nav-home{
-  color: rgba(190, 16, 16, 0.726);
+  color:white;
 }
 .navbar-toggler{
   float: right;
+}
+
+.nav-logo{
+  height:50px;
+  width: 50px;
 }
 
 .nav-about{

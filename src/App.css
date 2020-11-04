@@ -10,11 +10,9 @@
 }
 
 h1 {
-  font-weight: 900;
   text-decoration-skip: objects;
   text-align: center;
   padding-bottom: 0.5em;
-  text-decoration: underline;
   padding-top: 0.5em;
 }
 

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import './NavBar.css'
 import icon from '../../Assets/Icons/menu.png'
+import icon2 from '../../Assets/Icons/navlogo.png'
 
 function NavBar() {
   const [navbar,setNavbar] = useState(false)
@@ -19,7 +20,11 @@ function NavBar() {
   return(
 
     <nav className="navbar navbar-expand-lg navbar1 font-weight-bold sticky-top">
-      <div className="navbar-brand text-light"></div>
+      <Link 
+        className="navbar-brand text-light"
+        smooth to="/#home">
+        <img src={icon2} alt="V" className="nav-logo"/>
+      </Link>
     <button className="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Togglee navigation">
       <img src={icon} alt="menu"/>
     </button>
