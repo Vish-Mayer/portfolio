@@ -22,4 +22,13 @@ describe('Profile', () => {
   it('displays a profile picture', () => {
     expect(wrapper.find("img").at(7).prop("src")).toEqual(profilepic)
   });
+
+  describe('project link button', () => {
+    it('displays a button ', () => {
+      expect(wrapper.find('.projects-button').props().children).toBe("View my work")
+    });
+    it('links to the projects page', () => {
+      expect(wrapper.find('.projects-link').props().to).toBe('/projects/#project-list')
+    });
+  })
 });

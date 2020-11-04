@@ -1,3 +1,4 @@
+
 describe('Projects', () => {
   
   it('displays a list of project cards', () => {
@@ -11,10 +12,18 @@ describe('Projects', () => {
     cy.contains('Music Visualiser').should('be.visible') 
   })
 
-  it('has a button the close the pop up window', () => {
+  it('has a button that close the pop up window', () => {
     cy.visit('http://localhost:3000/projects/#project-content')
     cy.get('.project-card').first().click()
     cy.get('.close-modal').click() 
     cy.get('.close-modal').should('not.be.visible') 
+  })
+
+  it('slider displays 3 images', () => {
+    cy.visit('http://localhost:3000/projects/#project-content')
+    cy.get('.project-card').first().click()
+    cy.get('#goRight').click()
+    cy.get('#goRight').click()
+    cy.get('.slider').should('have.length', 3)
   })
 })

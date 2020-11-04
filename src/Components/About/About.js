@@ -38,12 +38,13 @@ function About() {
                   at a high growth company.<i class="fas fa-quote-right fa-xs"></i>
                   </h4> 
                 <br/>
-                If you would like to learn more about myself, discuss working together, or find more about my projects, please feel free to <Link smooth to="/#contact">get in touch</Link>.
+                If you would like to learn more about myself, discuss working together, or find out more about my projects, please feel free to <Link smooth to="/#contact">get in touch</Link>.
               </p>
             
               <Link 
+              className="projects-link"
               smooth to="/projects/#project-list">
-                <button className="projects-link" >
+                <button className="projects-button" >
                   View my work
                 </button>
               </Link>
