@@ -21,7 +21,7 @@ function NavBar() {
 
     <nav className="navbar navbar-expand-lg navbar1 font-weight-bold sticky-top">
       <Link 
-        className="navbar-brand text-light"
+        className="navbar-brand text-light home"
         smooth to="/#home">
         <img src={icon2} alt="V" className="nav-logo"/>
       </Link>
@@ -30,14 +30,7 @@ function NavBar() {
     </button>
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav">
-        
-      <li className="nav-item">
-          <Link
-            className={navbar ? "nav-link home nav-home" : "nav-link text-secondary home home2"}
-            smooth to="/#home">
-              HOME
-          </Link>
-        </li>
+    
         <li className="nav-item">
           <Link
             className={navbar ? "nav-link nav-about" : "nav-link text-secondary about"}

@@ -17,13 +17,12 @@ describe('Modal', () => {
 
   const props = {
     open:(true),
-    title:"Test Modal Title",
-    image:"testimage.png",
-    image2:"testimage2.png",
-    image3:"testimage3.png",
-    image4:"testimage4.png",
-    description:"Test Modal Description",
-    techStack: "Test Stack",
+    title:'Test Modal Title',
+    image:'testimage.png',
+    image2:'testimage2.png',
+    image3:'testimage3.png',
+    description:'Test Modal Description',
+    techStack: 'Test Stack',
   }
 
   beforeEach(() => {
@@ -41,21 +40,20 @@ describe('Modal', () => {
       img1: 'testimage.png',
       img2: 'testimage2.png',
       img3: 'testimage3.png',
-      img4: 'testimage4.png'
     }
     expect(images.props).toEqual(imageArray)
   })
 
   it('renders the project title', () => {
-    expect(wrapper.find('h3').props().children).toBe("Test Modal Title")
+    expect(wrapper.find('h3').props().children).toBe('Test Modal Title')
   })
 
   it('renders the project title', () => {
-    expect(wrapper.find('.modal-tech-stack').props().children).toBe("Test Stack")
+    expect(wrapper.find('.modal-tech-stack').props().children).toBe('Test Stack')
   })
 
   it('renders the full project description', () => {
-    expect(wrapper.find('.modal-description').props().children).toBe("Test Modal Description")
+    expect(wrapper.find('.modal-description').props().children).toBe('Test Modal Description')
   })
 
   it('renders the Modal Footer', () => {
