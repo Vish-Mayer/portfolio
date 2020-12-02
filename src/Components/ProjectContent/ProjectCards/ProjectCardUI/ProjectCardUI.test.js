@@ -11,11 +11,11 @@ describe('Projects', () => {
   
   const props = {
     openModal: jest.fn(),
-    cardName:"Test Title",
-    cardDescription:"Testing a really long description that is longer than 10 words",
-    imgsrc:"testimage.png",
-    imgsrc2:"testimage2.png",
-    imgsrc3:"testimage3.png",
+    cardName:'Test Title',
+    cardDescription:'Testing a really long description that is longer than 10 words',
+    imgsrc:'testimage.png',
+    imgsrc2:'testimage2.png',
+    imgsrc3:'testimage3.png',
   }
   
   beforeEach(() => {
@@ -33,14 +33,14 @@ describe('Projects', () => {
     });
 
     it('displays the project image', () => {
-      expect(wrapper.find("img").prop("src")).toEqual("testimage.png")
+      expect(wrapper.find('img').prop('src')).toEqual('testimage.png')
     });
 
     it('displays the project title when hovered on', () => {
       expect(wrapper.find('.card-title').text()).toBe("Test Title")
     });
     
-    it('shows preview by displaying the first 10 letters of a description', () => {
+    it('shows preview by displaying the first 10 words of a description', () => {
       const output = "Testing a really long description that is longer than 10..."
       expect(wrapper.find('.card-text').text()).toContain(output)
     });

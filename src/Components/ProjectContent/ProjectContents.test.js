@@ -16,7 +16,7 @@ describe('ProjectContent', () => {
   });
 
   it('contains header with name of component', () => {
-    expect(wrapper.find('h1').text()).toBe("Projects")
+    expect(wrapper.find('h1').text()).toBe('Projects')
   });
 
   it('displays the project cards', () => {

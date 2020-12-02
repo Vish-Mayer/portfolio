@@ -15,7 +15,7 @@ describe('Projects', () => {
   });
 
   it('project cards class matches snapshot', () => {
-    const output = wrapper.find('.project-cards').props("className");
+    const output = wrapper.find('.project-cards').props('className');
     expect(JSON.stringify(output)).toMatchSnapshot();
   });
 });

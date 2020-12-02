@@ -1,5 +1,5 @@
 
-.big-banner{
+.header{
   background-image: url('../../Assets/Other/background1.jpg');
   height: 100vh;
   background-size: cover;
@@ -20,6 +20,17 @@
 .fa-chevron-down{
   position: absolute;
   bottom: 0em;
+}
+
+@media only screen and (max-width: 500px) {
+  .header{
+    background-image: url('../../Assets/Other/background2.jpg');
+    background-position: center;
+    max-width: 100%;
+    height: 85vh;
+    overflow: auto;
+    border-radius: 0;
+  }
 }
 
 @media only screen and (max-width: 650px) {

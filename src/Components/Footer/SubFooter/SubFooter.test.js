@@ -17,7 +17,7 @@ describe('SubFooter', () => {
 
   it('has a button that directs the user to the top of the page', () => {
     wrapper.scrollToTop = jest.fn();
-    // const children = (wrapper.find('.up-btn').props().children);
-    // expect(children.props.src).toBe('redarrow.png')
+    const children = (wrapper.find('.up-btn').props().children);
+    expect(children.props.src).toBe('redarrow.png')
   })
 });
